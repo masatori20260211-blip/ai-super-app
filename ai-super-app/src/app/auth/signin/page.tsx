@@ -35,7 +35,9 @@ function SignInForm() {
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 space-y-4">
         {authError && (
           <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-600">
-            メールアドレスまたはパスワードが正しくありません
+            {authError === "OAuthCallback" || authError === "OAuthSignin" || authError === "OAuthCreateAccount"
+              ? "Googleログインに失敗しました。しばらくしてから再度お試しください。"
+              : "メールアドレスまたはパスワードが正しくありません"}
           </div>
         )}
 

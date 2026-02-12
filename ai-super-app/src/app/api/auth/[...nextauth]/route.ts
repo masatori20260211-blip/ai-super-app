@@ -1,37 +1,14 @@
 export const dynamic = "force-dynamic";
 
+// NextAuthがVERCEL_URL（デプロイ固有URL）をフォールバックに使うのを防ぎ、
+// NEXTAUTH_URL（本番URL）を確実に使うようにする
+if (process.env.NEXTAUTH_URL) {
+  const url = new URL(process.env.NEXTAUTH_URL);
+  process.env.VERCEL_URL = url.host;
+}
+
 import NextAuth from "next-auth";
 import { authOptions } from "@/lib/auth";
 
-const auth = NextAuth(authOptions);
-
-async function handler(
-  req: Request,
-  ctx: { params: Promise<{ nextauth: string[] }> }
-) {
-  const nextauthUrl = process.env.NEXTAUTH_URL;
-  if (nextauthUrl) {
-    const target = new URL(nextauthUrl);
-    const headers = new Headers(req.headers);
-    headers.set("host", target.host);
-    headers.set("x-forwarded-host", target.host);
-    headers.set("x-forwarded-proto", "https");
-
-    const originalUrl = new URL(req.url);
-    originalUrl.host = target.host;
-    originalUrl.protocol = target.protocol;
-
-    const newReq = new Request(originalUrl.toString(), {
-      method: req.method,
-      headers,
-      body: req.body,
-      // @ts-expect-error duplex is required for streaming body in Node.js
-      duplex: "half",
-    });
-
-    return auth(newReq as any, ctx);
-  }
-  return auth(req as any, ctx);
-}
-
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };

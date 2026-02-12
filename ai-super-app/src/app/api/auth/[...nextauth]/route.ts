@@ -7,7 +7,7 @@ const auth = NextAuth(authOptions);
 
 async function handler(
   req: Request,
-  ctx: { params: { nextauth: string[] } }
+  ctx: { params: Promise<{ nextauth: string[] }> }
 ) {
   const nextauthUrl = process.env.NEXTAUTH_URL;
   if (nextauthUrl) {

@@ -120,8 +120,46 @@ export async function POST(req: NextRequest) {
       messages: [{ role: "user", content: userInput }],
     });
 
-    const text =
+    let text =
       message.content[0].type === "text" ? message.content[0].text : "";
+
+    // For thumbnail tool: generate AI image via Replicate if configured
+    if (toolId === "thumbnail" && process.env.REPLICATE_API_TOKEN) {
+      try {
+        const jsonMatch = text.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+          const parsed = JSON.parse(jsonMatch[0]);
+          if (parsed.imagePrompt) {
+            const imgRes = await fetch(
+              "https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions",
+              {
+                method: "POST",
+                headers: {
+                  Authorization: `Bearer ${process.env.REPLICATE_API_TOKEN}`,
+                  "Content-Type": "application/json",
+                  Prefer: "wait",
+                },
+                body: JSON.stringify({
+                  input: {
+                    prompt: parsed.imagePrompt,
+                    aspect_ratio: "16:9",
+                    num_outputs: 1,
+                  },
+                }),
+              }
+            );
+            const imgData = await imgRes.json();
+            const imageUrl = imgData.output?.[0];
+            if (imageUrl) {
+              parsed.imageUrl = imageUrl;
+              text = JSON.stringify(parsed);
+            }
+          }
+        }
+      } catch {
+        // Image generation failed, continue with text-only thumbnail
+      }
+    }
 
     // Try template-based rendering first, fallback to text-to-HTML
     let html: string | null = null;

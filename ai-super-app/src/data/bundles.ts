@@ -99,10 +99,10 @@ export const bundles: Bundle[] = [
       {id:"floor",nameKey:"tools.realestate.floor",emoji:"🛋️",type:"image-upload",
         inputLabelKey:"tools.realestate.floor_input",outputLabelKey:"tools.realestate.floor_output",
         aiPrompt:"あなたはインテリアコーディネーターです。部屋の写真から最適な家具配置と内装のアドバイスを提供してください。"},
-      {id:"value",nameKey:"tools.realestate.value",emoji:"💰",type:"form-input",
-        inputLabelKey:"tools.realestate.value_input",outputLabelKey:"tools.realestate.value_output",
-        fields:[{name:"所在地",placeholder:"例: 東京都渋谷区"},{name:"広さ",placeholder:"例: 65㎡ 2LDK"},{name:"築年数",placeholder:"例: 15年"}],
-        aiPrompt:"あなたは不動産鑑定士です。物件情報から推定価格帯と、資産価値に影響する要因を分析してください。"},
+      {id:"compare",nameKey:"tools.realestate.compare",emoji:"🔍",type:"form-input",
+        inputLabelKey:"tools.realestate.compare_input",outputLabelKey:"tools.realestate.compare_output",
+        fields:[{name:"候補1",placeholder:"例: 渋谷区 2LDK 家賃15万"},{name:"候補2",placeholder:"例: 世田谷区 2LDK 家賃12万"},{name:"重視ポイント",placeholder:"例: 通勤時間、子育て環境"}],
+        aiPrompt:"あなたは住まい選びのアドバイザーです。複数の物件候補の特徴を比較整理し、ライフスタイルに合った選択のポイントを提案してください。"},
       {id:"checklist",nameKey:"tools.realestate.checklist",emoji:"📋",type:"form-input",
         inputLabelKey:"tools.realestate.checklist_input",outputLabelKey:"tools.realestate.checklist_output",
         fields:[{name:"物件タイプ",placeholder:"例: 中古マンション"},{name:"家族構成",placeholder:"例: 夫婦+子供1人"},{name:"重視ポイント",placeholder:"例: 通勤、子育て環境"}],
@@ -132,10 +132,10 @@ export const bundles: Bundle[] = [
         inputLabelKey:"tools.money.budget_input",outputLabelKey:"tools.money.budget_output",
         fields:[{name:"月収",placeholder:"例: 30万円"},{name:"固定費",placeholder:"例: 家賃8万、光熱費1.5万"},{name:"貯金目標",placeholder:"例: 月5万円"}],
         aiPrompt:"あなたはファイナンシャルプランナーです。収支情報から最適な予算配分と節約ポイントを提案してください。"},
-      {id:"tax",nameKey:"tools.money.tax",emoji:"🏛️",type:"form-input",
-        inputLabelKey:"tools.money.tax_input",outputLabelKey:"tools.money.tax_output",
-        fields:[{name:"年収",placeholder:"例: 500万円"},{name:"副業収入",placeholder:"例: 月5万円"},{name:"控除",placeholder:"例: ふるさと納税、医療費"}],
-        aiPrompt:"あなたは税理士です。収入情報から確定申告のポイントと節税対策を提案してください。一般的なアドバイスであり税務相談ではない旨を記載してください。"},
+      {id:"deal",nameKey:"tools.money.deal",emoji:"🏷️",type:"form-input",
+        inputLabelKey:"tools.money.deal_input",outputLabelKey:"tools.money.deal_output",
+        fields:[{name:"見直したい項目",placeholder:"例: スマホ代、サブスク"},{name:"月の支出",placeholder:"例: 25万円"},{name:"家族構成",placeholder:"例: 一人暮らし"}],
+        aiPrompt:"あなたは節約アドバイザーです。固定費・変動費の見直しポイントと、すぐに実践できる節約テクニックを具体的に提案してください。"},
       {id:"saving",nameKey:"tools.money.saving",emoji:"🐷",type:"form-input",
         inputLabelKey:"tools.money.saving_input",outputLabelKey:"tools.money.saving_output",
         fields:[{name:"目標金額",placeholder:"例: 100万円"},{name:"期間",placeholder:"例: 1年"},{name:"月の余裕額",placeholder:"例: 5万円"}],
@@ -152,10 +152,10 @@ export const bundles: Bundle[] = [
         inputLabelKey:"tools.pet.petfood_input",outputLabelKey:"tools.pet.petfood_output",
         fields:[{name:"ペットの種類",placeholder:"例: 柴犬"},{name:"年齢・体重",placeholder:"例: 3歳 10kg"},{name:"健康状態",placeholder:"例: 特になし"}],
         aiPrompt:"あなたはペット栄養士です。ペットの情報から最適な食事プランとおすすめフードを提案してください。"},
-      {id:"petsymptom",nameKey:"tools.pet.petsymptom",emoji:"🏥",type:"text-input",
-        inputLabelKey:"tools.pet.petsymptom_input",outputLabelKey:"tools.pet.petsymptom_output",
-        placeholder:"例: 最近食欲がなく、元気がない。水は飲んでいる。",
-        aiPrompt:"あなたはペットの健康アドバイザーです。症状から考えられる原因と対処法を提案してください。必ず「獣医への相談を推奨」と記載してください。"}
+      {id:"training",nameKey:"tools.pet.training",emoji:"🎾",type:"text-input",
+        inputLabelKey:"tools.pet.training_input",outputLabelKey:"tools.pet.training_output",
+        placeholder:"例: 散歩中に他の犬に吠えてしまう。1歳のトイプードル。",
+        aiPrompt:"あなたはペットトレーナーです。しつけの悩みに対して、ポジティブ強化を中心とした具体的なトレーニング方法を提案してください。"}
     ]
   },
   {
@@ -272,22 +272,6 @@ export const bundles: Bundle[] = [
     ]
   },
   {
-    id:"legal",emoji:"⚖️",gradient:"from-slate-600 to-slate-800",bgLight:"bg-slate-50",
-    tools:[
-      {id:"check",nameKey:"tools.legal.check",emoji:"📋",type:"file-upload",
-        inputLabelKey:"tools.legal.check_input",outputLabelKey:"tools.legal.check_output",
-        aiPrompt:"あなたは契約書レビューの専門家です。契約書のリスク条項、不利な条件、欠落条項を指摘してください。法的助言ではなく一般的な情報提供である旨を記載してください。"},
-      {id:"consult",nameKey:"tools.legal.consult",emoji:"💬",type:"text-input",
-        inputLabelKey:"tools.legal.consult_input",outputLabelKey:"tools.legal.consult_output",
-        placeholder:"例: 退職時に有給休暇を消化させてもらえない。どうすればいい？",
-        aiPrompt:"あなたは法律の一般的な情報提供者です。法律問題について一般的な知識を共有してください。必ず「弁護士への相談を推奨」と記載してください。"},
-      {id:"letter",nameKey:"tools.legal.letter",emoji:"📝",type:"text-input",
-        inputLabelKey:"tools.legal.letter_input",outputLabelKey:"tools.legal.letter_output",
-        placeholder:"例: 隣人の騒音に対する改善要望の手紙",
-        aiPrompt:"あなたは文書作成の専門家です。要点から丁寧で効果的な書面を作成してください。法的効力についての注意事項も記載してください。"}
-    ]
-  },
-  {
     id:"learn",emoji:"📖",gradient:"from-emerald-500 to-green-600",bgLight:"bg-emerald-50",
     tools:[
       {id:"explain",nameKey:"tools.learn.explain",emoji:"💡",type:"text-input",
@@ -357,10 +341,10 @@ export const bundles: Bundle[] = [
   {
     id:"senior",emoji:"👴",gradient:"from-teal-500 to-green-600",bgLight:"bg-teal-50",
     tools:[
-      {id:"health",nameKey:"tools.senior.health",emoji:"💊",type:"form-input",
-        inputLabelKey:"tools.senior.health_input",outputLabelKey:"tools.senior.health_output",
-        fields:[{name:"年齢",placeholder:"例: 70歳"},{name:"持病",placeholder:"例: 高血圧"},{name:"気になること",placeholder:"例: 膝の痛み"}],
-        aiPrompt:"あなたはシニア向けの健康アドバイザーです。年齢と健康状態に合った生活アドバイスを提供してください。必ず「医師への相談を推奨」と記載してください。"},
+      {id:"exercise",nameKey:"tools.senior.exercise",emoji:"🤸",type:"form-input",
+        inputLabelKey:"tools.senior.exercise_input",outputLabelKey:"tools.senior.exercise_output",
+        fields:[{name:"年齢",placeholder:"例: 70歳"},{name:"体力レベル",placeholder:"例: 毎日散歩している"},{name:"場所",placeholder:"例: 自宅、公園"}],
+        aiPrompt:"あなたはシニア向けの運動インストラクターです。年齢と体力に合った安全で楽しい軽運動メニューを提案してください。ラジオ体操やウォーキングなど日常に取り入れやすいものを中心に。"},
       {id:"digital",nameKey:"tools.senior.digital",emoji:"📱",type:"text-input",
         inputLabelKey:"tools.senior.digital_input",outputLabelKey:"tools.senior.digital_output",
         placeholder:"例: LINEでビデオ通話のやり方がわからない",
@@ -405,23 +389,6 @@ export const bundles: Bundle[] = [
     ]
   },
   {
-    id:"sleep",emoji:"😴",gradient:"from-indigo-500 to-purple-700",bgLight:"bg-indigo-50",
-    tools:[
-      {id:"analyze",nameKey:"tools.sleep.analyze",emoji:"📊",type:"form-input",
-        inputLabelKey:"tools.sleep.analyze_input",outputLabelKey:"tools.sleep.analyze_output",
-        fields:[{name:"就寝時間",placeholder:"例: 0:30"},{name:"起床時間",placeholder:"例: 7:00"},{name:"悩み",placeholder:"例: 寝つきが悪い、途中で起きる"}],
-        aiPrompt:"あなたは睡眠コンサルタントです。睡眠パターンを分析し、質を改善するための具体的なアドバイスを提供してください。"},
-      {id:"routine",nameKey:"tools.sleep.routine",emoji:"🌙",type:"form-input",
-        inputLabelKey:"tools.sleep.routine_input",outputLabelKey:"tools.sleep.routine_output",
-        fields:[{name:"仕事時間",placeholder:"例: 9時〜18時"},{name:"悩み",placeholder:"例: 夜型を直したい"},{name:"生活習慣",placeholder:"例: 寝る前にスマホ"}],
-        aiPrompt:"あなたは睡眠改善の専門家です。生活リズムに合った理想的なナイトルーティンを提案してください。時間割形式で記載してください。"},
-      {id:"sound",nameKey:"tools.sleep.sound",emoji:"🎵",type:"form-input",
-        inputLabelKey:"tools.sleep.sound_input",outputLabelKey:"tools.sleep.sound_output",
-        fields:[{name:"好みの音",placeholder:"例: 雨音、波の音"},{name:"目的",placeholder:"例: 入眠、リラックス"}],
-        aiPrompt:"あなたは音響療法の専門家です。好みに合った睡眠用サウンドスケープの構成を提案してください。おすすめアプリやYouTubeチャンネルも記載してください。"}
-    ]
-  },
-  {
     id:"eco",emoji:"🌍",gradient:"from-green-500 to-emerald-600",bgLight:"bg-green-50",
     tools:[
       {id:"footprint",nameKey:"tools.eco.footprint",emoji:"👣",type:"form-input",
@@ -435,23 +402,6 @@ export const bundles: Bundle[] = [
         inputLabelKey:"tools.eco.save_input",outputLabelKey:"tools.eco.save_output",
         fields:[{name:"住居タイプ",placeholder:"例: マンション 2LDK"},{name:"月の電気代",placeholder:"例: 8000円"},{name:"家電",placeholder:"例: エアコン2台、冷蔵庫"}],
         aiPrompt:"あなたは省エネアドバイザーです。電力使用状況を分析し、節電の具体的な方法と月の節約額を提案してください。"}
-    ]
-  },
-  {
-    id:"invest",emoji:"📈",gradient:"from-emerald-600 to-teal-700",bgLight:"bg-emerald-50",
-    tools:[
-      {id:"analysis",nameKey:"tools.invest.analysis",emoji:"📊",type:"form-input",
-        inputLabelKey:"tools.invest.analysis_input",outputLabelKey:"tools.invest.analysis_output",
-        fields:[{name:"銘柄・商品",placeholder:"例: S&P500, 全世界株式"},{name:"投資額",placeholder:"例: 月3万円"},{name:"期間",placeholder:"例: 20年"}],
-        aiPrompt:"あなたは投資教育の専門家です。投資情報から期待リターンとリスクを分析してください。投資助言ではなく一般的な教育情報である旨を記載してください。"},
-      {id:"portfolio",nameKey:"tools.invest.portfolio",emoji:"🥧",type:"form-input",
-        inputLabelKey:"tools.invest.portfolio_input",outputLabelKey:"tools.invest.portfolio_output",
-        fields:[{name:"年齢",placeholder:"例: 30歳"},{name:"リスク許容度",placeholder:"例: 中程度"},{name:"投資可能額",placeholder:"例: 月5万円"}],
-        aiPrompt:"あなたは資産配分の教育者です。年齢とリスク許容度に合った資産配分の考え方を紹介してください。投資助言ではなく一般的な教育情報である旨を記載してください。"},
-      {id:"news",nameKey:"tools.invest.news",emoji:"📰",type:"text-input",
-        inputLabelKey:"tools.invest.news_input",outputLabelKey:"tools.invest.news_output",
-        placeholder:"例: 米国の利下げが日本株に与える影響",
-        aiPrompt:"あなたは経済ニュースの解説者です。経済トピックをわかりやすく解説してください。投資判断の材料ではなく教育目的である旨を記載してください。"}
     ]
   },
   {
@@ -550,6 +500,57 @@ export const bundles: Bundle[] = [
         inputLabelKey:"tools.access.sign_input",outputLabelKey:"tools.access.sign_output",
         fields:[{name:"内容",placeholder:"例: トイレの場所案内"},{name:"設置場所",placeholder:"例: 商業施設の1階"},{name:"対象者",placeholder:"例: 外国人観光客、高齢者"}],
         aiPrompt:"あなたはユニバーサルデザインの専門家です。多言語対応でアクセシブルな案内板のデザイン提案をしてください。ピクトグラムの使い方も記載してください。"}
+    ]
+  },
+  {
+    id:"time",emoji:"⏰",gradient:"from-blue-400 to-indigo-500",bgLight:"bg-blue-50",
+    tools:[
+      {id:"schedule",nameKey:"tools.time.schedule",emoji:"📅",type:"form-input",
+        inputLabelKey:"tools.time.schedule_input",outputLabelKey:"tools.time.schedule_output",
+        fields:[{name:"やること",placeholder:"例: 勉強、運動、読書、家事"},{name:"使える時間",placeholder:"例: 平日は仕事後の3時間"},{name:"優先度",placeholder:"例: 勉強を最優先"}],
+        aiPrompt:"あなたはタイムマネジメントの専門家です。やりたいことと使える時間から、効率的な週間スケジュールを作成してください。時間ブロック法を活用してください。"},
+      {id:"morning",nameKey:"tools.time.morning",emoji:"🌅",type:"form-input",
+        inputLabelKey:"tools.time.morning_input",outputLabelKey:"tools.time.morning_output",
+        fields:[{name:"起床時間",placeholder:"例: 6:00"},{name:"出発時間",placeholder:"例: 8:30"},{name:"やりたいこと",placeholder:"例: 運動、読書、英語学習"}],
+        aiPrompt:"あなたは朝活コーチです。起床から出発までの時間を最大限活用するモーニングルーティンを提案してください。段階的に習慣化するコツも記載してください。"},
+      {id:"habit",nameKey:"tools.time.habit",emoji:"✅",type:"form-input",
+        inputLabelKey:"tools.time.habit_input",outputLabelKey:"tools.time.habit_output",
+        fields:[{name:"身につけたい習慣",placeholder:"例: 毎日30分読書"},{name:"現状",placeholder:"例: 3日坊主になりがち"},{name:"環境",placeholder:"例: 在宅勤務"}],
+        aiPrompt:"あなたは習慣化の専門家です。行動科学に基づいた習慣定着のプランを作成してください。トリガー設定、小さく始める方法、記録の仕方を記載してください。"}
+    ]
+  },
+  {
+    id:"career",emoji:"🎯",gradient:"from-indigo-600 to-blue-700",bgLight:"bg-indigo-50",
+    tools:[
+      {id:"skill",nameKey:"tools.career.skill",emoji:"📊",type:"text-input",
+        inputLabelKey:"tools.career.skill_input",outputLabelKey:"tools.career.skill_output",
+        placeholder:"例: Webエンジニア3年目。React, TypeScript, Node.jsが使える。マネジメント経験なし。",
+        aiPrompt:"あなたはキャリアコンサルタントです。現在のスキルセットを分析し、市場価値を高めるために伸ばすべきスキルとその学習方法を提案してください。"},
+      {id:"interview",nameKey:"tools.career.interview",emoji:"🎤",type:"form-input",
+        inputLabelKey:"tools.career.interview_input",outputLabelKey:"tools.career.interview_output",
+        fields:[{name:"応募職種",placeholder:"例: フロントエンドエンジニア"},{name:"経験",placeholder:"例: React 2年"},{name:"不安な点",placeholder:"例: 転職理由の答え方"}],
+        aiPrompt:"あなたは面接対策のコーチです。職種に合った想定質問と模範回答例を提案してください。STAR法を活用した回答の組み立て方も記載してください。"},
+      {id:"plan",nameKey:"tools.career.plan",emoji:"🗺️",type:"form-input",
+        inputLabelKey:"tools.career.plan_input",outputLabelKey:"tools.career.plan_output",
+        fields:[{name:"現在の職種",placeholder:"例: 営業職"},{name:"目標",placeholder:"例: プロダクトマネージャー"},{name:"期間",placeholder:"例: 2年以内"}],
+        aiPrompt:"あなたはキャリアプランナーです。現在地から目標までのキャリアパスを設計してください。必要なスキル、経験、ステップを段階的に記載してください。"}
+    ]
+  },
+  {
+    id:"marketing",emoji:"📣",gradient:"from-orange-500 to-red-500",bgLight:"bg-orange-50",
+    tools:[
+      {id:"copy",nameKey:"tools.marketing.copy",emoji:"✍️",type:"form-input",
+        inputLabelKey:"tools.marketing.copy_input",outputLabelKey:"tools.marketing.copy_output",
+        fields:[{name:"商品・サービス",placeholder:"例: オンライン英会話アプリ"},{name:"ターゲット",placeholder:"例: 20-30代ビジネスパーソン"},{name:"媒体",placeholder:"例: LP、広告バナー"}],
+        aiPrompt:"あなたはコピーライターです。商品の特徴とターゲットから、キャッチコピー、ボディコピー、CTAを3パターン提案してください。AIDMA法則を活用してください。"},
+      {id:"seo",nameKey:"tools.marketing.seo",emoji:"🔍",type:"text-input",
+        inputLabelKey:"tools.marketing.seo_input",outputLabelKey:"tools.marketing.seo_output",
+        placeholder:"例: 「プログラミング 初心者 始め方」で上位表示したい",
+        aiPrompt:"あなたはSEOの専門家です。キーワードから検索意図を分析し、上位表示のための記事構成、見出し案、内部リンク戦略を提案してください。"},
+      {id:"ad",nameKey:"tools.marketing.ad",emoji:"📱",type:"form-input",
+        inputLabelKey:"tools.marketing.ad_input",outputLabelKey:"tools.marketing.ad_output",
+        fields:[{name:"商品・サービス",placeholder:"例: カフェの新メニュー"},{name:"予算",placeholder:"例: 月5万円"},{name:"目的",placeholder:"例: 来店数増加"}],
+        aiPrompt:"あなたは広告プランナーです。予算と目的から最適な広告プラットフォームの選定と、効果的な広告文・クリエイティブの方向性を提案してください。"}
     ]
   },
   {

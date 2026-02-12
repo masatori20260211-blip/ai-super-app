@@ -32,7 +32,7 @@
     },
     "realestate": {
       "floor": "3D内装", "floor_input": "部屋の写真をアップロード", "floor_output": "内装プラン",
-      "value": "物件査定", "value_input": "物件情報を入力", "value_output": "査定結果",
+      "compare": "物件比較", "compare_input": "候補物件を入力", "compare_output": "比較レポート",
       "checklist": "内見チェックリスト", "checklist_input": "内見条件を入力", "checklist_output": "チェックリスト"
     },
     "sns": {
@@ -42,13 +42,13 @@
     },
     "money": {
       "budget": "予算管理", "budget_input": "収支情報を入力", "budget_output": "予算プラン",
-      "tax": "確定申告サポート", "tax_input": "収入情報を入力", "tax_output": "税務アドバイス",
+      "deal": "節約術", "deal_input": "支出情報を入力", "deal_output": "節約プラン",
       "saving": "貯金プラン", "saving_input": "貯金目標を入力", "saving_output": "貯蓄プラン"
     },
     "pet": {
       "petphoto": "ペット写真", "petphoto_input": "ペットの写真をアップロード", "petphoto_output": "撮影アドバイス",
       "petfood": "ごはん相談", "petfood_input": "ペット情報を入力", "petfood_output": "食事アドバイス",
-      "petsymptom": "健康チェック", "petsymptom_input": "ペットの症状を入力", "petsymptom_output": "健康アドバイス"
+      "training": "しつけ相談", "training_input": "しつけの悩みを入力", "training_output": "トレーニング方法"
     },
     "travel": {
       "plan": "旅行プラン", "plan_input": "旅行条件を入力", "plan_output": "旅行プラン",
@@ -85,10 +85,10 @@
       "comp": "構図アドバイス", "comp_input": "写真をアップロード", "comp_output": "構図分析",
       "edit": "レタッチガイド", "edit_input": "写真をアップロード", "edit_output": "編集手順"
     },
-    "legal": {
-      "check": "契約書チェック", "check_input": "契約書ファイルをアップロード", "check_output": "チェック結果",
-      "consult": "法律相談", "consult_input": "法律の疑問を入力", "consult_output": "法律アドバイス",
-      "letter": "内容証明起草", "letter_input": "書面の要点を入力", "letter_output": "書面案"
+    "career": {
+      "skill": "スキル診断", "skill_input": "スキル情報を入力", "skill_output": "スキル分析",
+      "interview": "面接対策", "interview_input": "面接情報を入力", "interview_output": "面接対策プラン",
+      "plan": "キャリアプラン", "plan_input": "キャリア情報を入力", "plan_output": "キャリアロードマップ"
     },
     "learn": {
       "explain": "わかりやすく解説", "explain_input": "学びたい内容を入力", "explain_output": "解説",
@@ -111,7 +111,7 @@
       "craft": "工作アイデア", "craft_input": "材料情報を入力", "craft_output": "工作プラン"
     },
     "senior": {
-      "health": "健康管理", "health_input": "健康情報を入力", "health_output": "健康アドバイス",
+      "exercise": "シニア体操", "exercise_input": "体力情報を入力", "exercise_output": "運動メニュー",
       "digital": "デジタル教室", "digital_input": "操作の疑問を入力", "digital_output": "操作ガイド",
       "memory": "思い出整理", "memory_input": "古い写真をアップロード", "memory_output": "思い出ストーリー"
     },
@@ -125,20 +125,20 @@
       "cost": "維持費試算", "cost_input": "車両情報を入力", "cost_output": "年間維持費",
       "compare": "車種比較", "compare_input": "候補車種を入力", "compare_output": "比較分析"
     },
-    "sleep": {
-      "analyze": "睡眠分析", "analyze_input": "睡眠情報を入力", "analyze_output": "分析レポート",
-      "routine": "ナイトルーティン", "routine_input": "生活習慣を入力", "routine_output": "改善プラン",
-      "sound": "睡眠サウンド", "sound_input": "好みを入力", "sound_output": "おすすめサウンド"
+    "time": {
+      "schedule": "スケジュール最適化", "schedule_input": "予定を入力", "schedule_output": "最適スケジュール",
+      "morning": "朝活プラン", "morning_input": "朝の時間を入力", "morning_output": "モーニングルーティン",
+      "habit": "習慣トラッカー", "habit_input": "習慣情報を入力", "habit_output": "習慣化プラン"
     },
     "eco": {
       "footprint": "カーボンフットプリント", "footprint_input": "生活情報を入力", "footprint_output": "CO2排出レポート",
       "swap": "エコ代替品", "swap_input": "日用品の写真をアップロード", "swap_output": "代替品提案",
       "save": "省エネ提案", "save_input": "エネルギー使用情報を入力", "save_output": "省エネプラン"
     },
-    "invest": {
-      "analysis": "投資分析", "analysis_input": "投資情報を入力", "analysis_output": "分析レポート",
-      "portfolio": "資産配分", "portfolio_input": "資産情報を入力", "portfolio_output": "配分提案",
-      "news": "マーケット解説", "news_input": "気になるトピックを入力", "news_output": "マーケット分析"
+    "marketing": {
+      "copy": "コピーライティング", "copy_input": "商品情報を入力", "copy_output": "コピー案",
+      "seo": "SEO対策", "seo_input": "キーワードを入力", "seo_output": "SEO戦略",
+      "ad": "広告プラン", "ad_input": "広告情報を入力", "ad_output": "広告プラン"
     },
     "garden": {
       "identify": "植物識別", "identify_input": "植物の写真をアップロード", "identify_output": "識別結果",

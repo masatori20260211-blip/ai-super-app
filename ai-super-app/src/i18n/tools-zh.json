@@ -32,7 +32,7 @@
     },
     "realestate": {
       "floor": "3D室内设计", "floor_input": "上传房间照片", "floor_output": "设计方案",
-      "value": "房产估价", "value_input": "输入房产信息", "value_output": "估价结果",
+      "compare": "房源比较", "compare_input": "输入候选房源", "compare_output": "比较报告",
       "checklist": "看房清单", "checklist_input": "输入看房条件", "checklist_output": "检查清单"
     },
     "sns": {
@@ -42,13 +42,13 @@
     },
     "money": {
       "budget": "预算规划", "budget_input": "输入财务信息", "budget_output": "预算计划",
-      "tax": "报税助手", "tax_input": "输入收入信息", "tax_output": "报税建议",
+      "deal": "省钱妙招", "deal_input": "输入支出信息", "deal_output": "省钱计划",
       "saving": "储蓄计划", "saving_input": "输入储蓄目标", "saving_output": "储蓄方案"
     },
     "pet": {
       "petphoto": "宠物照片", "petphoto_input": "上传宠物照片", "petphoto_output": "编辑后的照片",
       "petfood": "宠物饮食", "petfood_input": "输入宠物信息", "petfood_output": "饮食建议",
-      "petsymptom": "宠物健康", "petsymptom_input": "描述宠物症状", "petsymptom_output": "健康建议"
+      "training": "宠物训练", "training_input": "描述行为问题", "training_output": "训练方法"
     },
     "travel": {
       "plan": "旅行计划", "plan_input": "输入旅行条件", "plan_output": "旅行方案",
@@ -85,10 +85,10 @@
       "comp": "构图建议", "comp_input": "上传照片", "comp_output": "构图分析",
       "edit": "修图指导", "edit_input": "上传照片", "edit_output": "修图步骤"
     },
-    "legal": {
-      "check": "合同检查", "check_input": "上传合同文件", "check_output": "检查结果",
-      "consult": "法律咨询", "consult_input": "描述法律问题", "consult_output": "法律建议",
-      "letter": "函件起草", "letter_input": "输入函件要点", "letter_output": "函件草稿"
+    "career": {
+      "skill": "技能诊断", "skill_input": "输入技能信息", "skill_output": "技能分析",
+      "interview": "面试准备", "interview_input": "输入面试信息", "interview_output": "面试策略",
+      "plan": "职业规划", "plan_input": "输入职业信息", "plan_output": "职业路线图"
     },
     "learn": {
       "explain": "概念讲解", "explain_input": "输入想学的内容", "explain_output": "讲解内容",
@@ -111,7 +111,7 @@
       "craft": "手工创意", "craft_input": "输入材料信息", "craft_output": "手工方案"
     },
     "senior": {
-      "health": "健康管理", "health_input": "输入健康信息", "health_output": "健康建议",
+      "exercise": "老年体操", "exercise_input": "输入体力信息", "exercise_output": "运动菜单",
       "digital": "数码指南", "digital_input": "描述操作问题", "digital_output": "操作指南",
       "memory": "回忆整理", "memory_input": "上传老照片", "memory_output": "回忆故事"
     },
@@ -125,20 +125,20 @@
       "cost": "费用估算", "cost_input": "输入车辆信息", "cost_output": "年度费用",
       "compare": "车型比较", "compare_input": "输入候选车型", "compare_output": "对比分析"
     },
-    "sleep": {
-      "analyze": "睡眠分析", "analyze_input": "输入睡眠信息", "analyze_output": "分析报告",
-      "routine": "作息方案", "routine_input": "输入生活习惯", "routine_output": "改善方案",
-      "sound": "助眠音乐", "sound_input": "输入偏好", "sound_output": "推荐方案"
+    "time": {
+      "schedule": "日程优化", "schedule_input": "输入待办事项", "schedule_output": "最优日程",
+      "morning": "晨间计划", "morning_input": "输入早晨时间", "morning_output": "晨间方案",
+      "habit": "习惯养成", "habit_input": "输入习惯信息", "habit_output": "习惯计划"
     },
     "eco": {
       "footprint": "碳足迹", "footprint_input": "输入生活信息", "footprint_output": "碳足迹报告",
       "swap": "环保替代", "swap_input": "上传日用品照片", "swap_output": "替代方案",
       "save": "节能建议", "save_input": "输入能源使用信息", "save_output": "节能方案"
     },
-    "invest": {
-      "analysis": "投资分析", "analysis_input": "输入投资信息", "analysis_output": "分析报告",
-      "portfolio": "资产配置", "portfolio_input": "输入资产信息", "portfolio_output": "配置建议",
-      "news": "市场动态", "news_input": "输入关注领域", "news_output": "市场分析"
+    "marketing": {
+      "copy": "文案写作", "copy_input": "输入产品信息", "copy_output": "文案方案",
+      "seo": "SEO策略", "seo_input": "输入关键词", "seo_output": "SEO计划",
+      "ad": "广告策划", "ad_input": "输入广告信息", "ad_output": "广告方案"
     },
     "garden": {
       "identify": "植物识别", "identify_input": "上传植物照片", "identify_output": "识别结果",

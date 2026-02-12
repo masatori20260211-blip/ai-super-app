@@ -5,13 +5,13 @@ export const categories: Category[] = [
     id: "life",
     emoji: "\u{1F3E0}",
     gradient: "from-orange-400 to-amber-500",
-    bundleIds: ["daily", "cook", "archive", "moving", "realestate", "sleep", "eco"],
+    bundleIds: ["daily", "cook", "archive", "moving", "realestate", "time", "eco"],
   },
   {
     id: "work",
     emoji: "\u{1F4BC}",
     gradient: "from-blue-500 to-indigo-600",
-    bundleIds: ["sidehustle", "biz", "legal", "money", "invest"],
+    bundleIds: ["sidehustle", "biz", "career", "money", "marketing"],
   },
   {
     id: "creative",

@@ -195,10 +195,12 @@ export async function POST(req: NextRequest) {
         replicateDebug = `exception:${e instanceof Error ? e.message : String(e)}`;
       }
     } else if (toolId === "thumbnail") {
-      const hasKey = "REPLICATE_API_TOKEN" in process.env;
-      const keyLen = (process.env.REPLICATE_API_TOKEN || "").length;
-      const envKeys = Object.keys(process.env).filter(k => k.includes("REPLICATE")).join(",");
-      replicateDebug = `no_token:exists=${hasKey}:len=${keyLen}:matches=${envKeys || "none"}`;
+      // Show all custom env var names (not values) for debugging
+      const allKeys = Object.keys(process.env)
+        .filter(k => !k.startsWith("_") && !k.startsWith("npm_") && !k.startsWith("NODE_") && !k.startsWith("NEXT_RUNTIME"))
+        .sort()
+        .join(",");
+      replicateDebug = `no_token:all_env_keys=[${allKeys}]`;
     }
 
     // Try template-based rendering first, fallback to text-to-HTML

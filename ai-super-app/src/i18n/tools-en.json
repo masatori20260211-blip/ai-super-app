@@ -15,11 +15,6 @@
       "invoice": "Invoice Creator", "invoice_input": "Enter invoice details", "invoice_output": "Invoice Preview",
       "contract": "Contract Review", "contract_input": "Upload contract file", "contract_output": "Review Results"
     },
-    "beauty": {
-      "skin": "Skin Diagnosis", "skin_input": "Upload face photo", "skin_output": "Skin Analysis Report",
-      "outfit": "Style Advice", "outfit_input": "Upload full-body photo", "outfit_output": "Style Suggestions",
-      "headshot": "Profile Photo", "headshot_input": "Upload selfie", "headshot_output": "Professional Headshot Tips"
-    },
     "parent": {
       "babyname": "Baby Naming", "babyname_input": "Enter naming preferences", "babyname_output": "Name Suggestions",
       "plant": "Plant Diagnosis", "plant_input": "Upload plant photo", "plant_output": "Diagnosis Results",
@@ -29,11 +24,6 @@
       "study": "Quiz Generator", "study_input": "Upload textbook photo", "study_output": "Practice Questions",
       "tone": "Tone Converter", "tone_input": "Enter text to convert", "tone_output": "Converted Text",
       "resume": "Resume Optimizer", "resume_input": "Upload resume file", "resume_output": "Optimization Tips"
-    },
-    "health": {
-      "symptom": "Symptom Checker", "symptom_input": "Enter health info", "symptom_output": "Health Advice",
-      "run": "Running Routes", "run_input": "Enter running preferences", "run_output": "Recommended Route",
-      "meal": "Meal Planner", "meal_input": "Enter dietary info", "meal_output": "Meal Plan"
     },
     "design": {
       "logo": "Logo Generator", "logo_input": "Enter brand info", "logo_output": "Logo Concepts",
@@ -89,11 +79,6 @@
       "arrange": "Dish Improvement", "arrange_input": "Upload dish photo", "arrange_output": "Improvement Tips",
       "menu": "Menu Planner", "menu_input": "Enter meal preferences", "menu_output": "Weekly Menu",
       "pairing": "Pairing Suggestion", "pairing_input": "Enter main dish", "pairing_output": "Pairing Ideas"
-    },
-    "fitness": {
-      "form": "Form Check", "form_input": "Upload exercise photo", "form_output": "Form Guidance",
-      "program": "Training Program", "program_input": "Enter training goals", "program_output": "Training Program",
-      "stretch": "Stretch Menu", "stretch_input": "Enter body condition", "stretch_output": "Stretch Routine"
     },
     "photo": {
       "enhance": "Photo Enhancement", "enhance_input": "Upload photo", "enhance_output": "Enhancement Tips",
@@ -154,16 +139,6 @@
       "analysis": "Investment Analysis", "analysis_input": "Enter investment info", "analysis_output": "Analysis Report",
       "portfolio": "Asset Allocation", "portfolio_input": "Enter asset info", "portfolio_output": "Allocation Suggestions",
       "news": "Market Insight", "news_input": "Enter topic of interest", "news_output": "Market Analysis"
-    },
-    "therapy": {
-      "journal": "Mood Journal", "journal_input": "Write about your day", "journal_output": "Mindful Feedback",
-      "breathe": "Breathing Exercise", "breathe_input": "Enter current state", "breathe_output": "Exercise Guide",
-      "cbt": "CBT Exercise", "cbt_input": "Describe your concern", "cbt_output": "Cognitive Analysis"
-    },
-    "fashion": {
-      "coord": "Outfit Planner", "coord_input": "Upload clothing photo", "coord_output": "Outfit Ideas",
-      "trend": "Trend Analysis", "trend_input": "Enter style preferences", "trend_output": "Trend Report",
-      "capsule": "Capsule Wardrobe", "capsule_input": "Enter budget and style", "capsule_output": "Shopping List"
     },
     "garden": {
       "identify": "Plant Identifier", "identify_input": "Upload plant photo", "identify_output": "Identification Results",

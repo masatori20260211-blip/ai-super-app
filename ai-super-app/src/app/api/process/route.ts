@@ -1,4 +1,5 @@
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
@@ -120,8 +121,65 @@ export async function POST(req: NextRequest) {
       messages: [{ role: "user", content: userInput }],
     });
 
-    const text =
+    let text =
       message.content[0].type === "text" ? message.content[0].text : "";
+
+    // For thumbnail tool: generate AI image via Replicate if configured
+    if (toolId === "thumbnail" && process.env.REPLICATE_API_TOKEN) {
+      try {
+        const jsonMatch = text.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+          const parsed = JSON.parse(jsonMatch[0]);
+          if (parsed.imagePrompt) {
+            const replicateToken = process.env.REPLICATE_API_TOKEN;
+
+            // Create prediction
+            const createRes = await fetch(
+              "https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions",
+              {
+                method: "POST",
+                headers: {
+                  Authorization: `Bearer ${replicateToken}`,
+                  "Content-Type": "application/json",
+                  Prefer: "wait=30",
+                },
+                body: JSON.stringify({
+                  input: {
+                    prompt: parsed.imagePrompt,
+                    aspect_ratio: "16:9",
+                    num_outputs: 1,
+                  },
+                }),
+              }
+            );
+
+            let imgData = await createRes.json();
+
+            // If not completed yet, poll for result
+            if (imgData.status && imgData.status !== "succeeded" && imgData.urls?.get) {
+              for (let i = 0; i < 15; i++) {
+                await new Promise((r) => setTimeout(r, 2000));
+                const pollRes = await fetch(imgData.urls.get, {
+                  headers: { Authorization: `Bearer ${replicateToken}` },
+                });
+                imgData = await pollRes.json();
+                if (imgData.status === "succeeded" || imgData.status === "failed") break;
+              }
+            }
+
+            const imageUrl = imgData.output?.[0];
+            if (imageUrl) {
+              parsed.imageUrl = imageUrl;
+              text = JSON.stringify(parsed);
+            } else {
+              console.error("Replicate: no output", JSON.stringify(imgData).slice(0, 500));
+            }
+          }
+        }
+      } catch (e) {
+        console.error("Replicate image generation failed:", e instanceof Error ? e.message : e);
+      }
+    }
 
     // Try template-based rendering first, fallback to text-to-HTML
     let html: string | null = null;

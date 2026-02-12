@@ -170,19 +170,22 @@ const color: ToolTemplate = {
 // ─── THUMBNAIL ───
 const thumbnail: ToolTemplate = {
   prompt: `必ずJSON形式のみで回答（説明テキスト不要、JSONだけ）:
-{"title":"メインテキスト（大きく表示）","subtitle":"サブテキスト","badge":"バッジ(必見/衝撃/速報等)","emoji":"大きい絵文字","colors":{"bg1":"#hex","bg2":"#hex","text":"#hex","accent":"#hex"},"layout":"center|left"}`,
+{"title":"メインテキスト（大きく表示）","subtitle":"サブテキスト","badge":"バッジ(必見/衝撃/速報等)","imagePrompt":"English prompt for AI image generation: describe a vivid, eye-catching background scene for this YouTube thumbnail. Be specific about colors, lighting, composition. Do NOT include any text in the image.","colors":{"bg1":"#hex","bg2":"#hex","text":"#hex","accent":"#hex"},"layout":"center|left"}`,
   render: (raw, _ui) => {
-    const d = parseJSON(raw) as { title: string; subtitle: string; badge: string; emoji: string; colors: { bg1: string; bg2: string; text: string; accent: string }; layout: string } | null;
+    const d = parseJSON(raw) as { title: string; subtitle: string; badge: string; imagePrompt: string; imageUrl: string; colors: { bg1: string; bg2: string; text: string; accent: string }; layout: string } | null;
     if (!d) return "";
     const c = { bg1: d.colors?.bg1 || "#1e1e2e", bg2: d.colors?.bg2 || "#6366f1", text: d.colors?.text || "#fff", accent: d.colors?.accent || "#ff0044" };
+    const bgStyle = d.imageUrl
+      ? `background:url('${d.imageUrl}') center/cover no-repeat`
+      : `background:linear-gradient(135deg,${c.bg1},${c.bg2})`;
     let html = `<div style="font-family:${F};max-width:480px;margin:0 auto;">
-      <div style="text-align:center;font-size:12px;color:#64748b;margin-bottom:8px;">YouTubeサムネイル</div>
-      <div style="aspect-ratio:16/9;background:linear-gradient(135deg,${c.bg1},${c.bg2});border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
-        ${d.badge ? `<div style="position:absolute;top:14px;left:14px;background:${c.accent};color:#fff;padding:5px 14px;border-radius:6px;font-size:13px;font-weight:900;">${d.badge}</div>` : ""}
-        ${d.emoji ? `<div style="position:absolute;right:20px;bottom:20px;font-size:56px;">${d.emoji}</div>` : ""}
-        <div style="${d.layout === "left" ? "text-align:left;padding-right:80px;" : "text-align:center;"}">
-          <div style="font-size:28px;font-weight:900;color:${c.text};line-height:1.2;text-shadow:2px 2px 8px rgba(0,0,0,0.4);">${d.title || ""}</div>
-          ${d.subtitle ? `<div style="font-size:14px;color:${c.text};opacity:0.85;margin-top:8px;text-shadow:1px 1px 4px rgba(0,0,0,0.3);">${d.subtitle}</div>` : ""}
+      <div style="text-align:center;font-size:12px;color:#64748b;margin-bottom:8px;">YouTubeサムネイル（AI生成）</div>
+      <div style="aspect-ratio:16/9;${bgStyle};border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
+        ${d.imageUrl ? `<div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);"></div>` : ""}
+        ${d.badge ? `<div style="position:absolute;top:14px;left:14px;background:${c.accent};color:#fff;padding:5px 14px;border-radius:6px;font-size:13px;font-weight:900;z-index:1;">${d.badge}</div>` : ""}
+        <div style="position:relative;z-index:1;${d.layout === "left" ? "text-align:left;padding-right:80px;" : "text-align:center;"}">
+          <div style="font-size:28px;font-weight:900;color:${c.text};line-height:1.2;text-shadow:2px 2px 8px rgba(0,0,0,0.6);">${d.title || ""}</div>
+          ${d.subtitle ? `<div style="font-size:14px;color:${c.text};opacity:0.9;margin-top:8px;text-shadow:1px 1px 4px rgba(0,0,0,0.5);">${d.subtitle}</div>` : ""}
         </div>
       </div>
     </div>`;

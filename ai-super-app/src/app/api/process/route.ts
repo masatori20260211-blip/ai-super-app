@@ -124,12 +124,18 @@ export async function POST(req: NextRequest) {
     let text =
       message.content[0].type === "text" ? message.content[0].text : "";
 
-    // For thumbnail tool: generate AI image via Together AI or Replicate
+    // AI image generation for tools with imagePrompt
+    const IMAGE_TOOLS: Record<string, { width: number; height: number; aspect: string }> = {
+      thumbnail: { width: 1024, height: 576, aspect: "16:9" },
+      logo: { width: 1024, height: 1024, aspect: "1:1" },
+      mockup: { width: 576, height: 1024, aspect: "9:16" },
+    };
     let imageDebug: string | null = null;
     const imageApiKey = process.env.TOGETHER_API_KEY || process.env.REPLICATE_API_TOKEN;
     const imageProvider = process.env.TOGETHER_API_KEY ? "together" : process.env.REPLICATE_API_TOKEN ? "replicate" : null;
+    const imageConfig = toolId ? IMAGE_TOOLS[toolId] : null;
 
-    if (toolId === "thumbnail" && imageApiKey && imageProvider) {
+    if (imageConfig && imageApiKey && imageProvider) {
       try {
         const jsonMatch = text.match(/\{[\s\S]*\}/);
         if (jsonMatch) {
@@ -148,8 +154,8 @@ export async function POST(req: NextRequest) {
                 body: JSON.stringify({
                   model: "black-forest-labs/FLUX.1-schnell",
                   prompt: parsed.imagePrompt,
-                  width: 1024,
-                  height: 576,
+                  width: imageConfig.width,
+                  height: imageConfig.height,
                   n: 1,
                   response_format: "b64_json",
                 }),
@@ -180,7 +186,7 @@ export async function POST(req: NextRequest) {
                     "Content-Type": "application/json",
                   },
                   body: JSON.stringify({
-                    input: { prompt: parsed.imagePrompt, aspect_ratio: "16:9", num_outputs: 1 },
+                    input: { prompt: parsed.imagePrompt, aspect_ratio: imageConfig.aspect, num_outputs: 1 },
                   }),
                 }
               );
@@ -211,7 +217,7 @@ export async function POST(req: NextRequest) {
       } catch (e) {
         imageDebug = `exception:${e instanceof Error ? e.message : String(e)}`;
       }
-    } else if (toolId === "thumbnail") {
+    } else if (imageConfig) {
       imageDebug = "no_image_api_key";
     }
 

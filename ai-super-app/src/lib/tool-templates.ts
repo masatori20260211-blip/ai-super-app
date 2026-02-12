@@ -175,13 +175,11 @@ const thumbnail: ToolTemplate = {
     const d = parseJSON(raw) as { title: string; subtitle: string; badge: string; imagePrompt: string; imageUrl: string; colors: { bg1: string; bg2: string; text: string; accent: string }; layout: string } | null;
     if (!d) return "";
     const c = { bg1: d.colors?.bg1 || "#1e1e2e", bg2: d.colors?.bg2 || "#6366f1", text: d.colors?.text || "#fff", accent: d.colors?.accent || "#ff0044" };
-    const bgStyle = d.imageUrl
-      ? `background:url('${d.imageUrl}') center/cover no-repeat`
-      : `background:linear-gradient(135deg,${c.bg1},${c.bg2})`;
     let html = `<div style="font-family:${F};max-width:480px;margin:0 auto;">
-      <div style="text-align:center;font-size:12px;color:#64748b;margin-bottom:8px;">YouTubeサムネイル（AI生成）</div>
-      <div style="aspect-ratio:16/9;${bgStyle};border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
-        ${d.imageUrl ? `<div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);"></div>` : ""}
+      <div style="text-align:center;font-size:12px;color:#64748b;margin-bottom:8px;">YouTubeサムネイル${d.imageUrl ? "（AI画像生成）" : ""}</div>
+      <div style="aspect-ratio:16/9;background:linear-gradient(135deg,${c.bg1},${c.bg2});border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
+        ${d.imageUrl ? `<img src="${d.imageUrl}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" crossorigin="anonymous" />` : ""}
+        ${d.imageUrl ? `<div style="position:absolute;inset:0;background:rgba(0,0,0,0.3);"></div>` : ""}
         ${d.badge ? `<div style="position:absolute;top:14px;left:14px;background:${c.accent};color:#fff;padding:5px 14px;border-radius:6px;font-size:13px;font-weight:900;z-index:1;">${d.badge}</div>` : ""}
         <div style="position:relative;z-index:1;${d.layout === "left" ? "text-align:left;padding-right:80px;" : "text-align:center;"}">
           <div style="font-size:28px;font-weight:900;color:${c.text};line-height:1.2;text-shadow:2px 2px 8px rgba(0,0,0,0.6);">${d.title || ""}</div>

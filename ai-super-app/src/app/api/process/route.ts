@@ -124,83 +124,95 @@ export async function POST(req: NextRequest) {
     let text =
       message.content[0].type === "text" ? message.content[0].text : "";
 
-    // For thumbnail tool: generate AI image via Replicate if configured
-    let replicateDebug: string | null = null;
-    if (toolId === "thumbnail" && process.env.REPLICATE_API_TOKEN) {
+    // For thumbnail tool: generate AI image via Together AI or Replicate
+    let imageDebug: string | null = null;
+    const imageApiKey = process.env.TOGETHER_API_KEY || process.env.REPLICATE_API_TOKEN;
+    const imageProvider = process.env.TOGETHER_API_KEY ? "together" : process.env.REPLICATE_API_TOKEN ? "replicate" : null;
+
+    if (toolId === "thumbnail" && imageApiKey && imageProvider) {
       try {
         const jsonMatch = text.match(/\{[\s\S]*\}/);
         if (jsonMatch) {
           const parsed = JSON.parse(jsonMatch[0]);
           if (parsed.imagePrompt) {
-            const replicateToken = process.env.REPLICATE_API_TOKEN;
-            replicateDebug = "prompt_found";
+            imageDebug = `${imageProvider}:calling`;
 
-            // Create prediction using models endpoint (no version needed)
-            const createRes = await fetch(
-              "https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions",
-              {
+            if (imageProvider === "together") {
+              // Together AI - synchronous, returns base64
+              const res = await fetch("https://api.together.xyz/v1/images/generations", {
                 method: "POST",
                 headers: {
-                  Authorization: `Bearer ${replicateToken}`,
+                  Authorization: `Bearer ${imageApiKey}`,
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                  input: {
-                    prompt: parsed.imagePrompt,
-                    aspect_ratio: "16:9",
-                    num_outputs: 1,
-                  },
+                  model: "black-forest-labs/FLUX.1-schnell-Free",
+                  prompt: parsed.imagePrompt,
+                  width: 1024,
+                  height: 576,
+                  n: 1,
+                  response_format: "b64_json",
                 }),
+              });
+
+              if (!res.ok) {
+                const errText = await res.text();
+                imageDebug = `together:error:${res.status}:${errText.slice(0, 200)}`;
+              } else {
+                const data = await res.json();
+                const b64 = data.data?.[0]?.b64_json;
+                if (b64) {
+                  parsed.imageUrl = `data:image/png;base64,${b64}`;
+                  text = JSON.stringify(parsed);
+                  imageDebug = "together:ok";
+                } else {
+                  imageDebug = `together:no_output`;
+                }
               }
-            );
-
-            const resBody = await createRes.text();
-            replicateDebug = `status:${createRes.status}`;
-
-            if (!createRes.ok) {
-              replicateDebug = `error:${createRes.status}:${resBody.slice(0, 200)}`;
             } else {
-              let imgData = JSON.parse(resBody);
-              replicateDebug = `prediction:${imgData.status}`;
-
-              // Poll for result if not yet completed
-              while (imgData.status === "starting" || imgData.status === "processing") {
-                await new Promise((r) => setTimeout(r, 1500));
-                const pollRes = await fetch(
-                  `https://api.replicate.com/v1/predictions/${imgData.id}`,
-                  { headers: { Authorization: `Bearer ${replicateToken}` } }
-                );
-                imgData = await pollRes.json();
-                replicateDebug = `poll:${imgData.status}`;
-              }
-
-              if (imgData.status === "succeeded" && imgData.output) {
+              // Replicate fallback
+              const res = await fetch(
+                "https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions",
+                {
+                  method: "POST",
+                  headers: {
+                    Authorization: `Bearer ${imageApiKey}`,
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    input: { prompt: parsed.imagePrompt, aspect_ratio: "16:9", num_outputs: 1 },
+                  }),
+                }
+              );
+              if (!res.ok) {
+                imageDebug = `replicate:error:${res.status}`;
+              } else {
+                let imgData = await res.json();
+                while (imgData.status === "starting" || imgData.status === "processing") {
+                  await new Promise((r) => setTimeout(r, 1500));
+                  const pollRes = await fetch(
+                    `https://api.replicate.com/v1/predictions/${imgData.id}`,
+                    { headers: { Authorization: `Bearer ${imageApiKey}` } }
+                  );
+                  imgData = await pollRes.json();
+                }
                 const imageUrl = Array.isArray(imgData.output) ? imgData.output[0] : imgData.output;
-                if (imageUrl) {
+                if (imgData.status === "succeeded" && imageUrl) {
                   parsed.imageUrl = imageUrl;
                   text = JSON.stringify(parsed);
-                  replicateDebug = `ok:${imageUrl.slice(0, 60)}`;
+                  imageDebug = "replicate:ok";
+                } else {
+                  imageDebug = `replicate:fail:${imgData.status}`;
                 }
-              } else {
-                replicateDebug = `fail:${imgData.status}:${JSON.stringify(imgData.error || imgData.logs || "").slice(0, 200)}`;
               }
             }
-          } else {
-            replicateDebug = "no_imagePrompt_in_json";
           }
-        } else {
-          replicateDebug = "no_json_match";
         }
       } catch (e) {
-        replicateDebug = `exception:${e instanceof Error ? e.message : String(e)}`;
+        imageDebug = `exception:${e instanceof Error ? e.message : String(e)}`;
       }
     } else if (toolId === "thumbnail") {
-      // Show all custom env var names (not values) for debugging
-      const allKeys = Object.keys(process.env)
-        .filter(k => !k.startsWith("_") && !k.startsWith("npm_") && !k.startsWith("NODE_") && !k.startsWith("NEXT_RUNTIME"))
-        .sort()
-        .join(",");
-      replicateDebug = `no_token:all_env_keys=[${allKeys}]`;
+      imageDebug = "no_image_api_key";
     }
 
     // Try template-based rendering first, fallback to text-to-HTML
@@ -269,7 +281,7 @@ export async function POST(req: NextRequest) {
       remaining = -1;
     }
 
-    return NextResponse.json({ results: lines, remaining, html, ...(replicateDebug ? { _debug: replicateDebug } : {}) });
+    return NextResponse.json({ results: lines, remaining, html, ...(imageDebug ? { _debug: imageDebug } : {}) });
   } catch (e: unknown) {
     const msg = e instanceof Error ? e.message : "Unknown error";
     console.error("AI processing error:", msg);

@@ -133,17 +133,18 @@ export async function POST(req: NextRequest) {
           if (parsed.imagePrompt) {
             const replicateToken = process.env.REPLICATE_API_TOKEN;
 
-            // Create prediction
+            // Create prediction (use general endpoint with version)
             const createRes = await fetch(
-              "https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions",
+              "https://api.replicate.com/v1/predictions",
               {
                 method: "POST",
                 headers: {
-                  Authorization: `Bearer ${replicateToken}`,
+                  Authorization: `Token ${replicateToken}`,
                   "Content-Type": "application/json",
-                  Prefer: "wait=30",
+                  Prefer: "wait",
                 },
                 body: JSON.stringify({
+                  version: "5599ed30703defd1d160a25a63321b4dec97101d98b4674bcc56e41f62f35637",
                   input: {
                     prompt: parsed.imagePrompt,
                     aspect_ratio: "16:9",
@@ -153,26 +154,31 @@ export async function POST(req: NextRequest) {
               }
             );
 
-            let imgData = await createRes.json();
-
-            // If not completed yet, poll for result
-            if (imgData.status && imgData.status !== "succeeded" && imgData.urls?.get) {
-              for (let i = 0; i < 15; i++) {
-                await new Promise((r) => setTimeout(r, 2000));
-                const pollRes = await fetch(imgData.urls.get, {
-                  headers: { Authorization: `Bearer ${replicateToken}` },
-                });
-                imgData = await pollRes.json();
-                if (imgData.status === "succeeded" || imgData.status === "failed") break;
-              }
-            }
-
-            const imageUrl = imgData.output?.[0];
-            if (imageUrl) {
-              parsed.imageUrl = imageUrl;
-              text = JSON.stringify(parsed);
+            if (!createRes.ok) {
+              const errText = await createRes.text();
+              console.error("Replicate API error:", createRes.status, errText);
             } else {
-              console.error("Replicate: no output", JSON.stringify(imgData).slice(0, 500));
+              let imgData = await createRes.json();
+
+              // If not completed yet, poll for result
+              if (imgData.status && imgData.status !== "succeeded" && imgData.urls?.get) {
+                for (let i = 0; i < 15; i++) {
+                  await new Promise((r) => setTimeout(r, 2000));
+                  const pollRes = await fetch(imgData.urls.get, {
+                    headers: { Authorization: `Token ${replicateToken}` },
+                  });
+                  imgData = await pollRes.json();
+                  if (imgData.status === "succeeded" || imgData.status === "failed") break;
+                }
+              }
+
+              const imageUrl = imgData.output?.[0];
+              if (imageUrl) {
+                parsed.imageUrl = imageUrl;
+                text = JSON.stringify(parsed);
+              } else {
+                console.error("Replicate: no output. status:", imgData.status, "error:", imgData.error);
+              }
             }
           }
         }

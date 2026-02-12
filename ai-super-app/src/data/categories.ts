@@ -8,12 +8,6 @@ export const categories: Category[] = [
     bundleIds: ["daily", "cook", "archive", "moving", "realestate", "sleep", "eco"],
   },
   {
-    id: "health",
-    emoji: "\u{1F4AA}",
-    gradient: "from-pink-400 to-rose-500",
-    bundleIds: ["health", "beauty", "fitness", "fashion", "therapy"],
-  },
-  {
     id: "work",
     emoji: "\u{1F4BC}",
     gradient: "from-blue-500 to-indigo-600",

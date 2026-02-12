@@ -48,20 +48,6 @@ export const bundles: Bundle[] = [
     ]
   },
   {
-    id:"beauty",emoji:"💄",gradient:"from-pink-400 to-rose-500",bgLight:"bg-pink-50",
-    tools:[
-      {id:"skin",nameKey:"tools.beauty.skin",emoji:"✨",type:"image-upload",
-        inputLabelKey:"tools.beauty.skin_input",outputLabelKey:"tools.beauty.skin_output",
-        aiPrompt:"あなたは皮膚科の美容アドバイザーです。肌の状態を分析し、スキンケアルーティンとおすすめ成分を提案してください。"},
-      {id:"outfit",nameKey:"tools.beauty.outfit",emoji:"👔",type:"image-upload",
-        inputLabelKey:"tools.beauty.outfit_input",outputLabelKey:"tools.beauty.outfit_output",
-        aiPrompt:"あなたはパーソナルスタイリストです。全身写真から体型・肌色に合うコーディネートを提案してください。"},
-      {id:"headshot",nameKey:"tools.beauty.headshot",emoji:"👤",type:"image-upload",
-        inputLabelKey:"tools.beauty.headshot_input",outputLabelKey:"tools.beauty.headshot_output",
-        aiPrompt:"あなたはプロフィール写真のフォトグラファーです。自撮り写真を分析し、よりプロフェッショナルに見えるアングル・照明・表情のアドバイスをしてください。"}
-    ]
-  },
-  {
     id:"parent",emoji:"👨‍👩‍👧‍👦",gradient:"from-sky-400 to-blue-500",bgLight:"bg-sky-50",
     tools:[
       {id:"babyname",nameKey:"tools.parent.babyname",emoji:"👶",type:"form-input",
@@ -89,23 +75,6 @@ export const bundles: Bundle[] = [
       {id:"resume",nameKey:"tools.student.resume",emoji:"📄",type:"file-upload",
         inputLabelKey:"tools.student.resume_input",outputLabelKey:"tools.student.resume_output",
         aiPrompt:"あなたはキャリアアドバイザーです。履歴書を分析し、改善ポイント、強調すべきスキル、面接対策のアドバイスを提供してください。"}
-    ]
-  },
-  {
-    id:"health",emoji:"💪",gradient:"from-red-400 to-rose-500",bgLight:"bg-red-50",
-    tools:[
-      {id:"symptom",nameKey:"tools.health.symptom",emoji:"🩺",type:"form-input",
-        inputLabelKey:"tools.health.symptom_input",outputLabelKey:"tools.health.symptom_output",
-        fields:[{name:"症状",placeholder:"例: 頭痛、倦怠感"},{name:"期間",placeholder:"例: 3日前から"},{name:"年齢・性別",placeholder:"例: 30代男性"}],
-        aiPrompt:"あなたは健康アドバイザーです(医師ではありません)。症状から考えられる原因と、セルフケアのアドバイスを提供してください。必ず「医師への相談を推奨」と記載してください。"},
-      {id:"run",nameKey:"tools.health.run",emoji:"🏃",type:"form-input",
-        inputLabelKey:"tools.health.run_input",outputLabelKey:"tools.health.run_output",
-        fields:[{name:"場所",placeholder:"例: 渋谷区周辺"},{name:"距離",placeholder:"例: 5km"},{name:"レベル",placeholder:"例: 初心者"}],
-        aiPrompt:"あなたはランニングコーチです。条件に合ったランニングルートを提案してください。距離、高低差、おすすめポイント、注意事項を記載してください。"},
-      {id:"meal",nameKey:"tools.health.meal",emoji:"🥗",type:"form-input",
-        inputLabelKey:"tools.health.meal_input",outputLabelKey:"tools.health.meal_output",
-        fields:[{name:"目的",placeholder:"例: ダイエット、筋肉増量"},{name:"制限",placeholder:"例: 乳製品NG"},{name:"予算",placeholder:"例: 1日1500円以内"}],
-        aiPrompt:"あなたは管理栄養士です。目的と制限に合った1日の食事プランを提案してください。カロリーとPFCバランスも記載してください。"}
     ]
   },
   {
@@ -286,22 +255,6 @@ export const bundles: Bundle[] = [
         inputLabelKey:"tools.cook.pairing_input",outputLabelKey:"tools.cook.pairing_output",
         placeholder:"例: 鶏の唐揚げ",
         aiPrompt:"あなたはフードペアリングの専門家です。メイン料理に合う副菜、ドリンク、デザートを提案してください。"}
-    ]
-  },
-  {
-    id:"fitness",emoji:"🏋️",gradient:"from-orange-500 to-red-600",bgLight:"bg-orange-50",
-    tools:[
-      {id:"form",nameKey:"tools.fitness.form",emoji:"📷",type:"image-upload",
-        inputLabelKey:"tools.fitness.form_input",outputLabelKey:"tools.fitness.form_output",
-        aiPrompt:"あなたはパーソナルトレーナーです。トレーニングフォームの写真を分析し、改善ポイントとケガ予防のアドバイスを提供してください。"},
-      {id:"program",nameKey:"tools.fitness.program",emoji:"📋",type:"form-input",
-        inputLabelKey:"tools.fitness.program_input",outputLabelKey:"tools.fitness.program_output",
-        fields:[{name:"目標",placeholder:"例: 筋肉増量、体脂肪15%以下"},{name:"頻度",placeholder:"例: 週3回"},{name:"器具",placeholder:"例: ダンベルのみ"}],
-        aiPrompt:"あなたはパーソナルトレーナーです。目標に合った週間トレーニングプログラムを作成してください。セット数・レップ数・休憩時間も記載してください。"},
-      {id:"stretch",nameKey:"tools.fitness.stretch",emoji:"🧘",type:"form-input",
-        inputLabelKey:"tools.fitness.stretch_input",outputLabelKey:"tools.fitness.stretch_output",
-        fields:[{name:"気になる部位",placeholder:"例: 肩、腰"},{name:"生活スタイル",placeholder:"例: デスクワーク8時間"}],
-        aiPrompt:"あなたはストレッチの専門家です。体の状態に合った10分間のストレッチメニューを作成してください。各ストレッチの時間と回数も記載してください。"}
     ]
   },
   {
@@ -499,39 +452,6 @@ export const bundles: Bundle[] = [
         inputLabelKey:"tools.invest.news_input",outputLabelKey:"tools.invest.news_output",
         placeholder:"例: 米国の利下げが日本株に与える影響",
         aiPrompt:"あなたは経済ニュースの解説者です。経済トピックをわかりやすく解説してください。投資判断の材料ではなく教育目的である旨を記載してください。"}
-    ]
-  },
-  {
-    id:"therapy",emoji:"🧘",gradient:"from-purple-400 to-indigo-500",bgLight:"bg-purple-50",
-    tools:[
-      {id:"journal",nameKey:"tools.therapy.journal",emoji:"📔",type:"text-input",
-        inputLabelKey:"tools.therapy.journal_input",outputLabelKey:"tools.therapy.journal_output",
-        placeholder:"今日あったこと、感じたことを自由に書いてください",
-        aiPrompt:"あなたは優しいカウンセラーです。日記の内容に共感しながら、感情を整理するための質問やポジティブな気づきを提供してください。専門的な治療ではない旨を記載してください。"},
-      {id:"breathe",nameKey:"tools.therapy.breathe",emoji:"🌬️",type:"form-input",
-        inputLabelKey:"tools.therapy.breathe_input",outputLabelKey:"tools.therapy.breathe_output",
-        fields:[{name:"今の気分",placeholder:"例: 不安、イライラ"},{name:"使える時間",placeholder:"例: 5分"}],
-        aiPrompt:"あなたはマインドフルネスの専門家です。気分に合った呼吸法とリラクゼーション方法をステップバイステップで案内してください。"},
-      {id:"cbt",nameKey:"tools.therapy.cbt",emoji:"🧠",type:"text-input",
-        inputLabelKey:"tools.therapy.cbt_input",outputLabelKey:"tools.therapy.cbt_output",
-        placeholder:"例: 仕事でミスをして、自分はダメだと感じている",
-        aiPrompt:"あなたは認知行動療法の教育者です。ネガティブな思考パターンを特定し、より柔軟な考え方を提案してください。専門的なカウンセリングではない旨を記載してください。"}
-    ]
-  },
-  {
-    id:"fashion",emoji:"👗",gradient:"from-fuchsia-500 to-pink-600",bgLight:"bg-fuchsia-50",
-    tools:[
-      {id:"coord",nameKey:"tools.fashion.coord",emoji:"👔",type:"image-upload",
-        inputLabelKey:"tools.fashion.coord_input",outputLabelKey:"tools.fashion.coord_output",
-        aiPrompt:"あなたはファッションスタイリストです。手持ちの服の写真からコーディネートを提案してください。トレンドも取り入れてください。"},
-      {id:"trend",nameKey:"tools.fashion.trend",emoji:"📈",type:"form-input",
-        inputLabelKey:"tools.fashion.trend_input",outputLabelKey:"tools.fashion.trend_output",
-        fields:[{name:"好きなスタイル",placeholder:"例: ミニマル、ストリート"},{name:"年齢",placeholder:"例: 20代後半"},{name:"予算",placeholder:"例: 月2万円"}],
-        aiPrompt:"あなたはファッショントレンドアナリストです。スタイルと予算に合った今季のトレンドアイテムとコーディネートを提案してください。"},
-      {id:"capsule",nameKey:"tools.fashion.capsule",emoji:"🗂️",type:"form-input",
-        inputLabelKey:"tools.fashion.capsule_input",outputLabelKey:"tools.fashion.capsule_output",
-        fields:[{name:"季節",placeholder:"例: 春夏"},{name:"予算",placeholder:"例: 5万円"},{name:"スタイル",placeholder:"例: ビジネスカジュアル"}],
-        aiPrompt:"あなたはカプセルワードローブの専門家です。最小限のアイテムで最大限のコーデが組める服リストを提案してください。"}
     ]
   },
   {

@@ -15,11 +15,6 @@
       "invoice": "청구서 생성", "invoice_input": "청구 정보 입력", "invoice_output": "청구서 미리보기",
       "contract": "계약서 검토", "contract_input": "계약서 파일 업로드", "contract_output": "검토 결과"
     },
-    "beauty": {
-      "skin": "피부 진단", "skin_input": "얼굴 사진 업로드", "skin_output": "피부 분석 리포트",
-      "outfit": "코디 추천", "outfit_input": "전신 사진 업로드", "outfit_output": "코디 제안",
-      "headshot": "프로필 사진", "headshot_input": "셀카 사진 업로드", "headshot_output": "프로필 사진"
-    },
     "parent": {
       "babyname": "작명", "babyname_input": "작명 조건 입력", "babyname_output": "추천 이름",
       "plant": "식물 진단", "plant_input": "식물 사진 업로드", "plant_output": "진단 결과",
@@ -29,11 +24,6 @@
       "study": "문제집 생성", "study_input": "교재 사진 업로드", "study_output": "연습 문제",
       "tone": "톤 변환", "tone_input": "변환할 글 입력", "tone_output": "변환 결과",
       "resume": "이력서 최적화", "resume_input": "이력서 파일 업로드", "resume_output": "최적화 제안"
-    },
-    "health": {
-      "symptom": "증상 체크", "symptom_input": "건강 정보 입력", "symptom_output": "건강 조언",
-      "run": "러닝 루트", "run_input": "러닝 조건 입력", "run_output": "추천 루트",
-      "meal": "식단 관리", "meal_input": "식단 정보 입력", "meal_output": "식단 플랜"
     },
     "design": {
       "logo": "로고 생성", "logo_input": "브랜드 정보 입력", "logo_output": "로고 안",
@@ -89,11 +79,6 @@
       "arrange": "요리 개선", "arrange_input": "요리 사진 업로드", "arrange_output": "개선 제안",
       "menu": "식단 계획", "menu_input": "식사 조건 입력", "menu_output": "주간 식단",
       "pairing": "페어링 추천", "pairing_input": "메인 요리 입력", "pairing_output": "페어링 안"
-    },
-    "fitness": {
-      "form": "자세 체크", "form_input": "운동 사진 업로드", "form_output": "자세 지도",
-      "program": "트레이닝 계획", "program_input": "훈련 목표 입력", "program_output": "훈련 프로그램",
-      "stretch": "스트레칭 안", "stretch_input": "신체 상태 입력", "stretch_output": "스트레칭 메뉴"
     },
     "photo": {
       "enhance": "사진 보정", "enhance_input": "사진 업로드", "enhance_output": "보정 제안",
@@ -154,16 +139,6 @@
       "analysis": "투자 분석", "analysis_input": "투자 정보 입력", "analysis_output": "분석 리포트",
       "portfolio": "자산 배분", "portfolio_input": "자산 정보 입력", "portfolio_output": "배분 제안",
       "news": "시장 동향", "news_input": "관심 분야 입력", "news_output": "시장 분석"
-    },
-    "therapy": {
-      "journal": "기분 일기", "journal_input": "오늘의 기분을 적어주세요", "journal_output": "심리 피드백",
-      "breathe": "호흡 연습", "breathe_input": "현재 상태 입력", "breathe_output": "연습 안",
-      "cbt": "인지 치료", "cbt_input": "고민 설명", "cbt_output": "인지 분석"
-    },
-    "fashion": {
-      "coord": "코디 추천", "coord_input": "옷 사진 업로드", "coord_output": "코디 안",
-      "trend": "트렌드 분석", "trend_input": "스타일 취향 입력", "trend_output": "트렌드 리포트",
-      "capsule": "캡슐 옷장", "capsule_input": "예산과 스타일 입력", "capsule_output": "추천 목록"
     },
     "garden": {
       "identify": "식물 식별", "identify_input": "식물 사진 업로드", "identify_output": "식별 결과",

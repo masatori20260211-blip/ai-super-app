@@ -15,11 +15,6 @@
       "invoice": "請求書作成", "invoice_input": "請求情報を入力", "invoice_output": "請求書プレビュー",
       "contract": "契約書チェック", "contract_input": "契約書ファイルをアップロード", "contract_output": "チェック結果"
     },
-    "beauty": {
-      "skin": "スキンケア診断", "skin_input": "顔の写真をアップロード", "skin_output": "スキンケア分析",
-      "outfit": "コーデ提案", "outfit_input": "全身の写真をアップロード", "outfit_output": "コーデ提案",
-      "headshot": "プロフ写真", "headshot_input": "自撮り写真をアップロード", "headshot_output": "プロフィール写真"
-    },
     "parent": {
       "babyname": "命名", "babyname_input": "命名の条件を入力", "babyname_output": "おすすめの名前",
       "plant": "植物診断", "plant_input": "植物の写真をアップロード", "plant_output": "診断結果",
@@ -29,11 +24,6 @@
       "study": "問題集生成", "study_input": "教科書の写真をアップロード", "study_output": "練習問題",
       "tone": "トーン変換", "tone_input": "変換したい文章を入力", "tone_output": "変換結果",
       "resume": "履歴書最適化", "resume_input": "履歴書ファイルをアップロード", "resume_output": "最適化提案"
-    },
-    "health": {
-      "symptom": "症状チェック", "symptom_input": "健康情報を入力", "symptom_output": "健康アドバイス",
-      "run": "ランニングルート", "run_input": "ランニング条件を入力", "run_output": "おすすめルート",
-      "meal": "食事管理", "meal_input": "食事情報を入力", "meal_output": "食事プラン"
     },
     "design": {
       "logo": "ロゴ生成", "logo_input": "ブランド情報を入力", "logo_output": "ロゴ案",
@@ -89,11 +79,6 @@
       "arrange": "料理アレンジ", "arrange_input": "料理の写真をアップロード", "arrange_output": "アレンジ提案",
       "menu": "献立作成", "menu_input": "食事の条件を入力", "menu_output": "1週間の献立",
       "pairing": "ペアリング提案", "pairing_input": "メイン料理を入力", "pairing_output": "ペアリング案"
-    },
-    "fitness": {
-      "form": "フォームチェック", "form_input": "トレーニング写真をアップロード", "form_output": "フォーム指導",
-      "program": "トレーニング計画", "program_input": "トレーニング目標を入力", "program_output": "トレーニングプログラム",
-      "stretch": "ストレッチメニュー", "stretch_input": "体の状態を入力", "stretch_output": "ストレッチメニュー"
     },
     "photo": {
       "enhance": "写真補正", "enhance_input": "写真をアップロード", "enhance_output": "補正アドバイス",
@@ -154,16 +139,6 @@
       "analysis": "投資分析", "analysis_input": "投資情報を入力", "analysis_output": "分析レポート",
       "portfolio": "資産配分", "portfolio_input": "資産情報を入力", "portfolio_output": "配分提案",
       "news": "マーケット解説", "news_input": "気になるトピックを入力", "news_output": "マーケット分析"
-    },
-    "therapy": {
-      "journal": "気分日記", "journal_input": "今日の気持ちを書いてください", "journal_output": "心理フィードバック",
-      "breathe": "呼吸エクササイズ", "breathe_input": "今の状態を入力", "breathe_output": "エクササイズ案",
-      "cbt": "認知行動療法", "cbt_input": "悩みを入力", "cbt_output": "認知分析"
-    },
-    "fashion": {
-      "coord": "コーデ提案", "coord_input": "服の写真をアップロード", "coord_output": "コーデ案",
-      "trend": "トレンド分析", "trend_input": "好みのスタイルを入力", "trend_output": "トレンドレポート",
-      "capsule": "カプセルワードローブ", "capsule_input": "予算とスタイルを入力", "capsule_output": "おすすめリスト"
     },
     "garden": {
       "identify": "植物識別", "identify_input": "植物の写真をアップロード", "identify_output": "識別結果",

@@ -29,10 +29,10 @@ const F = `-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-seri
 // ─── LOGO ───
 const logo: ToolTemplate = {
   prompt: `必ずJSON形式のみで回答（説明テキスト不要、JSONだけ）:
-{"concepts":[{"name":"コンセプト名","tagline":"一言説明","symbol":"シンボルの形状","colors":{"primary":"#hex","secondary":"#hex","bg":"#hex背景色"},"fontStyle":"sans-serif|serif|monospace"}]}
-3つのコンセプトを提案。`,
+{"imagePrompt":"English prompt for AI logo image generation: describe a professional, modern logo design. Include the brand name text rendered beautifully, visual symbol/icon, color scheme, and clean background. Be specific about style (flat, 3D, minimal, etc).","concepts":[{"name":"コンセプト名","tagline":"一言説明","symbol":"シンボルの形状","colors":{"primary":"#hex","secondary":"#hex","bg":"#hex背景色"},"fontStyle":"sans-serif|serif|monospace"}]}
+3つのコンセプトを提案。imagePromptは最も推奨するコンセプトのロゴを生成するプロンプトにしてください。`,
   render: (raw, userInput) => {
-    const d = parseJSON(raw) as { concepts: Array<{ name: string; tagline: string; symbol: string; colors: { primary: string; secondary: string; bg: string }; fontStyle: string }> } | null;
+    const d = parseJSON(raw) as { imageUrl?: string; imagePrompt?: string; concepts: Array<{ name: string; tagline: string; symbol: string; colors: { primary: string; secondary: string; bg: string }; fontStyle: string }> } | null;
     if (!d?.concepts?.length) return "";
     const brand = userInput.split("\n")[0].replace(/.*[:：]\s*/, "").trim();
     const shapes = [
@@ -45,6 +45,12 @@ const logo: ToolTemplate = {
         <div style="font-size:18px;font-weight:800;">ロゴデザイン提案</div>
         <div style="font-size:12px;opacity:0.8;margin-top:4px;">${brand}</div>
       </div>`;
+    if (d.imageUrl) {
+      html += `<div style="background:#f8fafc;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #e2e8f0;">
+        <img src="${d.imageUrl}" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;" crossorigin="anonymous" />
+        <div style="text-align:center;padding:8px;font-size:11px;color:#94a3b8;">AI\u753b\u50cf\u751f\u6210\u30a4\u30e1\u30fc\u30b8</div>
+      </div>`;
+    }
     d.concepts.forEach((c, i) => {
       const p = c.colors?.primary || "#667eea";
       const s = c.colors?.secondary || "#764ba2";
@@ -262,8 +268,61 @@ const calorie: ToolTemplate = {
   },
 };
 
+// ─── MOCKUP ───
+const mockup: ToolTemplate = {
+  prompt: `必ずJSON形式のみで回答（説明テキスト不要、JSONだけ）:
+{"title":"画面名","description":"画面の説明","imagePrompt":"English prompt for AI UI mockup generation: describe a modern, clean mobile app screen design. Include specific UI elements (buttons, cards, navigation), color scheme, typography style, and layout. Specify it as a professional UI/UX design rendered in high quality.","screens":[{"name":"画面名","elements":["要素1","要素2"],"flow":"ユーザーフロー説明"}],"colors":{"primary":"#hex","secondary":"#hex","bg":"#hex","text":"#hex"},"style":"ミニマル|モダン|ポップ等"}
+2-3画面分を提案。`,
+  render: (raw, _ui) => {
+    const d = parseJSON(raw) as { title: string; description: string; imageUrl?: string; imagePrompt?: string; screens: Array<{ name: string; elements: string[]; flow: string }>; colors: { primary: string; secondary: string; bg: string; text: string }; style: string } | null;
+    if (!d) return "";
+    const p = d.colors?.primary || "#6366f1";
+    const s = d.colors?.secondary || "#8b5cf6";
+    const bg = d.colors?.bg || "#f8fafc";
+    let html = `<div style="font-family:${F};max-width:480px;margin:0 auto;">
+      <div style="text-align:center;padding:16px;background:linear-gradient(135deg,${p},${s});border-radius:16px;color:#fff;margin-bottom:20px;">
+        <div style="font-size:18px;font-weight:800;">${d.title || "UIモックアップ"}</div>
+        <div style="font-size:12px;opacity:0.8;margin-top:4px;">${d.style || ""} ${d.description || ""}</div>
+      </div>`;
+    if (d.imageUrl) {
+      html += `<div style="background:#1e1e2e;border-radius:16px;overflow:hidden;margin-bottom:20px;padding:20px;display:flex;justify-content:center;">
+        <div style="width:240px;border-radius:24px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.3);">
+          <img src="${d.imageUrl}" style="width:100%;display:block;" crossorigin="anonymous" />
+        </div>
+      </div>
+      <div style="text-align:center;font-size:11px;color:#94a3b8;margin:-12px 0 16px;">AI\u751f\u6210\u30e2\u30c3\u30af\u30a2\u30c3\u30d7</div>`;
+    }
+    d.screens?.forEach((scr, i) => {
+      html += `<div style="background:${bg};border-radius:12px;padding:16px;margin-bottom:12px;border:1px solid #e2e8f0;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+          <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,${p},${s});color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;">${i + 1}</div>
+          <div style="font-size:14px;font-weight:700;color:#1e293b;">${scr.name}</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;">`;
+      scr.elements?.forEach((el) => {
+        html += `<span style="background:${p}15;color:${p};padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;">${el}</span>`;
+      });
+      html += `</div>`;
+      if (scr.flow) {
+        html += `<div style="font-size:11px;color:#64748b;line-height:1.5;">${scr.flow}</div>`;
+      }
+      html += `</div>`;
+    });
+    if (d.colors) {
+      html += `<div style="display:flex;gap:8px;justify-content:center;padding:12px;">`;
+      const cols = [{ l: "Primary", c: p }, { l: "Secondary", c: s }, { l: "BG", c: bg }];
+      cols.forEach((x) => {
+        html += `<div style="text-align:center;"><div style="width:36px;height:36px;border-radius:10px;background:${x.c};border:1px solid #e2e8f0;margin:0 auto;"></div><div style="font-size:9px;color:#94a3b8;margin-top:4px;">${x.l}</div></div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</div>`;
+    return html;
+  },
+};
+
 // ─── EXPORTS ───
-export const TOOL_TEMPLATES: Record<string, ToolTemplate> = { logo, color, thumbnail, plan, recipe, calorie };
+export const TOOL_TEMPLATES: Record<string, ToolTemplate> = { logo, color, thumbnail, plan, recipe, calorie, mockup };
 
 export function getToolPrompt(toolId: string): string | null {
   return TOOL_TEMPLATES[toolId]?.prompt || null;

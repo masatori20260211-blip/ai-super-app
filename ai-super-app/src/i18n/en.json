@@ -19,7 +19,8 @@
     "dailyLimitReached": "You've used all your free uses for today",
     "upgrade": "Upgrade to Premium",
     "freeRemaining": "{{count}} free uses left (today)",
-    "premium": "Premium"
+    "premium": "Premium",
+    "imageGen": "AI Image Generation"
   },
   "categories": {
     "life": { "name": "Lifestyle" },
@@ -71,6 +72,9 @@
     "archive": { "name": "TidyAI", "tagline": "Organize and declutter efficiently with AI" },
     "event": { "name": "EventAI", "tagline": "Plan the perfect event with AI" },
     "access": { "name": "AccessAI", "tagline": "Improve accessibility with AI" },
-    "news": { "name": "NewsAI", "tagline": "Catch up on the news efficiently with AI" }
+    "news": { "name": "NewsAI", "tagline": "Catch up on the news efficiently with AI" },
+    "time": { "name": "TimeAI", "tagline": "Optimize your time management with AI" },
+    "career": { "name": "CareerAI", "tagline": "AI support for your entire career" },
+    "marketing": { "name": "MarketingAI", "tagline": "Accelerate your marketing with AI" }
   }
 }

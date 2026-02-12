@@ -1,179 +1,179 @@
 {
   "tools": {
     "daily": {
-      "wardrobe": "Outfit Suggestion", "wardrobe_input": "Upload a photo of your closet", "wardrobe_output": "Today's Recommended Outfit",
-      "calorie": "Calorie Analysis", "calorie_input": "Upload a photo of your meal", "calorie_output": "Calorie & Nutrition Analysis",
-      "recipe": "Recipe Suggestion", "recipe_input": "Upload a photo of your fridge", "recipe_output": "Recommended Recipes"
+      "wardrobe": "Outfit Suggestion", "wardrobe_desc": "Get outfit ideas from your closet photo", "wardrobe_input": "Upload a photo of your closet", "wardrobe_output": "Today's Recommended Outfit",
+      "calorie": "Calorie Analysis", "calorie_desc": "Analyze calories and nutrients from a meal photo", "calorie_input": "Upload a photo of your meal", "calorie_output": "Calorie & Nutrition Analysis",
+      "recipe": "Recipe Suggestion", "recipe_desc": "Get recipe ideas from what's in your fridge", "recipe_input": "Upload a photo of your fridge", "recipe_output": "Recommended Recipes"
     },
     "creator": {
-      "thumbnail": "Thumbnail Generator", "thumbnail_input": "Enter video title", "thumbnail_output": "Thumbnail Ideas",
-      "voice": "Voice Clone", "voice_input": "Enter script text", "voice_output": "Voice Script",
-      "pitch": "Slide Generator", "pitch_input": "Enter presentation topic", "pitch_output": "Slide Structure"
+      "thumbnail": "Thumbnail Generator", "thumbnail_desc": "Generate eye-catching thumbnails from video titles", "thumbnail_input": "Enter video title", "thumbnail_output": "Thumbnail Ideas",
+      "voice": "Voice Clone", "voice_desc": "Optimize text for narration and voiceover", "voice_input": "Enter script text", "voice_output": "Voice Script",
+      "pitch": "Slide Generator", "pitch_desc": "Auto-generate slide structure from a topic", "pitch_input": "Enter presentation topic", "pitch_output": "Slide Structure"
     },
     "sidehustle": {
-      "listing": "Listing Generator", "listing_input": "Upload product photo", "listing_output": "Product Description",
-      "invoice": "Invoice Creator", "invoice_input": "Enter invoice details", "invoice_output": "Invoice Preview",
-      "contract": "Contract Review", "contract_input": "Upload contract file", "contract_output": "Review Results"
+      "listing": "Listing Generator", "listing_desc": "Create compelling product descriptions from photos", "listing_input": "Upload product photo", "listing_output": "Product Description",
+      "invoice": "Invoice Creator", "invoice_desc": "Generate professional invoice formats", "invoice_input": "Enter invoice details", "invoice_output": "Invoice Preview",
+      "contract": "Contract Review", "contract_desc": "Check contracts for risky clauses", "contract_input": "Upload contract file", "contract_output": "Review Results"
     },
     "parent": {
-      "babyname": "Baby Naming", "babyname_input": "Enter naming preferences", "babyname_output": "Name Suggestions",
-      "plant": "Plant Diagnosis", "plant_input": "Upload plant photo", "plant_output": "Diagnosis Results",
-      "receipt": "Budget Tracker", "receipt_input": "Upload receipt photo", "receipt_output": "Expense Log"
+      "babyname": "Baby Naming", "babyname_desc": "Suggest names considering meaning and compatibility", "babyname_input": "Enter naming preferences", "babyname_output": "Name Suggestions",
+      "plant": "Plant Diagnosis", "plant_desc": "Diagnose plant health and get care tips from photos", "plant_input": "Upload plant photo", "plant_output": "Diagnosis Results",
+      "receipt": "Budget Tracker", "receipt_desc": "Auto-analyze expenses from receipt photos", "receipt_input": "Upload receipt photo", "receipt_output": "Expense Log"
     },
     "student": {
-      "study": "Quiz Generator", "study_input": "Upload textbook photo", "study_output": "Practice Questions",
-      "tone": "Tone Converter", "tone_input": "Enter text to convert", "tone_output": "Converted Text",
-      "resume": "Resume Optimizer", "resume_input": "Upload resume file", "resume_output": "Optimization Tips"
+      "study": "Quiz Generator", "study_desc": "Auto-create practice questions from textbook photos", "study_input": "Upload textbook photo", "study_output": "Practice Questions",
+      "tone": "Tone Converter", "tone_desc": "Convert text tone (formal, casual, etc.)", "tone_input": "Enter text to convert", "tone_output": "Converted Text",
+      "resume": "Resume Optimizer", "resume_desc": "Analyze resumes and suggest improvements", "resume_input": "Upload resume file", "resume_output": "Optimization Tips"
     },
     "design": {
-      "logo": "Logo Generator", "logo_input": "Enter brand info", "logo_output": "Logo Concepts",
-      "color": "Color Palette", "color_input": "Upload reference image", "color_output": "Color Suggestions",
-      "mockup": "Mockup Generator", "mockup_input": "Enter product info", "mockup_output": "Mockup Design"
+      "logo": "Logo Generator", "logo_desc": "Generate logo designs from brand info", "logo_input": "Enter brand info", "logo_output": "Logo Concepts",
+      "color": "Color Palette", "color_desc": "Extract harmonious color palettes from images", "color_input": "Upload reference image", "color_output": "Color Suggestions",
+      "mockup": "Mockup Generator", "mockup_desc": "Generate product mockup images", "mockup_input": "Enter product info", "mockup_output": "Mockup Design"
     },
     "realestate": {
-      "floor": "3D Interior", "floor_input": "Upload room photo", "floor_output": "Interior Plan",
-      "compare": "Property Comparison", "compare_input": "Enter candidate properties", "compare_output": "Comparison Report",
-      "checklist": "Viewing Checklist", "checklist_input": "Enter viewing criteria", "checklist_output": "Checklist"
+      "floor": "3D Interior", "floor_desc": "Get furniture layout and decor ideas from room photos", "floor_input": "Upload room photo", "floor_output": "Interior Plan",
+      "compare": "Property Comparison", "compare_desc": "Compare multiple properties side by side", "compare_input": "Enter candidate properties", "compare_output": "Comparison Report",
+      "checklist": "Viewing Checklist", "checklist_desc": "Create a checklist for property viewings", "checklist_input": "Enter viewing criteria", "checklist_output": "Checklist"
     },
     "sns": {
-      "caption": "Caption Generator", "caption_input": "Enter post topic", "caption_output": "Caption Ideas",
-      "hashtag": "Hashtag Analysis", "hashtag_input": "Enter content keywords", "hashtag_output": "Recommended Hashtags",
-      "bg": "Product Photo Edit", "bg_input": "Upload product photo", "bg_output": "Editing Advice"
+      "caption": "Caption Generator", "caption_desc": "Create engaging captions from post topics", "caption_input": "Enter post topic", "caption_output": "Caption Ideas",
+      "hashtag": "Hashtag Analysis", "hashtag_desc": "Find the best hashtags for your content", "hashtag_input": "Enter content keywords", "hashtag_output": "Recommended Hashtags",
+      "bg": "Product Photo Edit", "bg_desc": "Get tips to improve product photo backgrounds", "bg_input": "Upload product photo", "bg_output": "Editing Advice"
     },
     "money": {
-      "budget": "Budget Planner", "budget_input": "Enter financial info", "budget_output": "Budget Plan",
-      "deal": "Money Saver", "deal_input": "Enter spending info", "deal_output": "Savings Plan",
-      "saving": "Savings Plan", "saving_input": "Enter savings goal", "saving_output": "Savings Strategy"
+      "budget": "Budget Planner", "budget_desc": "Get optimal budget allocation from your finances", "budget_input": "Enter financial info", "budget_output": "Budget Plan",
+      "deal": "Money Saver", "deal_desc": "Analyze spending patterns for savings opportunities", "deal_input": "Enter spending info", "deal_output": "Savings Plan",
+      "saving": "Savings Plan", "saving_desc": "Create a savings plan to reach your goals", "saving_input": "Enter savings goal", "saving_output": "Savings Strategy"
     },
     "pet": {
-      "petphoto": "Pet Photos", "petphoto_input": "Upload pet photo", "petphoto_output": "Photo Tips",
-      "petfood": "Pet Diet", "petfood_input": "Enter pet info", "petfood_output": "Diet Advice",
-      "training": "Pet Training", "training_input": "Describe behavior issue", "training_output": "Training Tips"
+      "petphoto": "Pet Photos", "petphoto_desc": "Get tips for taking great pet photos", "petphoto_input": "Upload pet photo", "petphoto_output": "Photo Tips",
+      "petfood": "Pet Diet", "petfood_desc": "Get personalized diet plans for your pet", "petfood_input": "Enter pet info", "petfood_output": "Diet Advice",
+      "training": "Pet Training", "training_desc": "Get training tips for behavior issues", "training_input": "Describe behavior issue", "training_output": "Training Tips"
     },
     "travel": {
-      "plan": "Trip Planner", "plan_input": "Enter travel preferences", "plan_output": "Travel Plan",
-      "pack": "Packing List", "pack_input": "Enter destination info", "pack_output": "Packing List",
-      "phrase": "Travel Phrases", "phrase_input": "Enter scenario", "phrase_output": "Useful Phrases"
+      "plan": "Trip Planner", "plan_desc": "Auto-create travel itineraries for your preferences", "plan_input": "Enter travel preferences", "plan_output": "Travel Plan",
+      "pack": "Packing List", "pack_desc": "Get a packing list tailored to your destination", "pack_input": "Enter destination info", "pack_output": "Packing List",
+      "phrase": "Travel Phrases", "phrase_desc": "Learn useful local phrases for your trip", "phrase_input": "Enter scenario", "phrase_output": "Useful Phrases"
     },
     "writer": {
-      "blog": "Blog Writer", "blog_input": "Enter article topic", "blog_output": "Article Outline",
-      "mail": "Email Drafter", "mail_input": "Enter email key points", "mail_output": "Email Draft",
-      "proofread": "Proofreader", "proofread_input": "Enter text to proofread", "proofread_output": "Proofread Results"
+      "blog": "Blog Writer", "blog_desc": "Generate blog article outlines from topics", "blog_input": "Enter article topic", "blog_output": "Article Outline",
+      "mail": "Email Drafter", "mail_desc": "Draft professional emails from key points", "mail_input": "Enter email key points", "mail_output": "Email Draft",
+      "proofread": "Proofreader", "proofread_desc": "Check text for typos, grammar, and style", "proofread_input": "Enter text to proofread", "proofread_output": "Proofread Results"
     },
     "diy": {
-      "plan": "DIY Planner", "plan_input": "Upload site photo", "plan_output": "Build Plan",
-      "cost": "Cost Estimate", "cost_input": "Enter project info", "cost_output": "Cost Breakdown",
-      "fix": "Repair Guide", "fix_input": "Upload damage photo", "fix_output": "Repair Steps"
+      "plan": "DIY Planner", "plan_desc": "Plan materials and steps from site photos", "plan_input": "Upload site photo", "plan_output": "Build Plan",
+      "cost": "Cost Estimate", "cost_desc": "Estimate material costs for DIY projects", "cost_input": "Enter project info", "cost_output": "Cost Breakdown",
+      "fix": "Repair Guide", "fix_desc": "Get step-by-step repair guides from damage photos", "fix_input": "Upload damage photo", "fix_output": "Repair Steps"
     },
     "music": {
-      "chord": "Chord Progressions", "chord_input": "Enter music genre", "chord_output": "Chord Ideas",
-      "lyric": "Lyric Generator", "lyric_input": "Enter lyric theme", "lyric_output": "Lyric Draft",
-      "mix": "Mix Advice", "mix_input": "Enter track info", "mix_output": "Mixing Tips"
+      "chord": "Chord Progressions", "chord_desc": "Get chord progression ideas for your genre", "chord_input": "Enter music genre", "chord_output": "Chord Ideas",
+      "lyric": "Lyric Generator", "lyric_desc": "Auto-generate lyrics from themes and moods", "lyric_input": "Enter lyric theme", "lyric_output": "Lyric Draft",
+      "mix": "Mix Advice", "mix_desc": "Get mixing improvement tips for your tracks", "mix_input": "Enter track info", "mix_output": "Mixing Tips"
     },
     "game": {
-      "idea": "Game Concept", "idea_input": "Enter game genre", "idea_output": "Concept Ideas",
-      "story": "Story Setting", "story_input": "Enter world setting", "story_output": "Story Outline",
-      "balance": "Balance Tuning", "balance_input": "Enter parameter info", "balance_output": "Balance Suggestions"
+      "idea": "Game Concept", "idea_desc": "Generate game concepts from genre preferences", "idea_input": "Enter game genre", "idea_output": "Concept Ideas",
+      "story": "Story Setting", "story_desc": "Build story outlines from world settings", "story_input": "Enter world setting", "story_output": "Story Outline",
+      "balance": "Balance Tuning", "balance_desc": "Analyze and tune game parameter balance", "balance_input": "Enter parameter info", "balance_output": "Balance Suggestions"
     },
     "cook": {
-      "arrange": "Dish Improvement", "arrange_input": "Upload dish photo", "arrange_output": "Improvement Tips",
-      "menu": "Menu Planner", "menu_input": "Enter meal preferences", "menu_output": "Weekly Menu",
-      "pairing": "Pairing Suggestion", "pairing_input": "Enter main dish", "pairing_output": "Pairing Ideas"
+      "arrange": "Dish Improvement", "arrange_desc": "Get improvement tips from dish photos", "arrange_input": "Upload dish photo", "arrange_output": "Improvement Tips",
+      "menu": "Menu Planner", "menu_desc": "Create a weekly meal plan for your preferences", "menu_input": "Enter meal preferences", "menu_output": "Weekly Menu",
+      "pairing": "Pairing Suggestion", "pairing_desc": "Find perfect side dishes and drinks to pair", "pairing_input": "Enter main dish", "pairing_output": "Pairing Ideas"
     },
     "photo": {
-      "enhance": "Photo Enhancement", "enhance_input": "Upload photo", "enhance_output": "Enhancement Tips",
-      "comp": "Composition Advice", "comp_input": "Upload photo", "comp_output": "Composition Analysis",
-      "edit": "Edit Guide", "edit_input": "Upload photo", "edit_output": "Editing Steps"
+      "enhance": "Photo Enhancement", "enhance_desc": "Get brightness and color improvement tips", "enhance_input": "Upload photo", "enhance_output": "Enhancement Tips",
+      "comp": "Composition Advice", "comp_desc": "Analyze and improve photo composition", "comp_input": "Upload photo", "comp_output": "Composition Analysis",
+      "edit": "Edit Guide", "edit_desc": "Get step-by-step photo editing instructions", "edit_input": "Upload photo", "edit_output": "Editing Steps"
     },
     "career": {
-      "skill": "Skill Assessment", "skill_input": "Enter your skills", "skill_output": "Skill Analysis",
-      "interview": "Interview Prep", "interview_input": "Enter interview info", "interview_output": "Interview Strategy",
-      "plan": "Career Plan", "plan_input": "Enter career info", "plan_output": "Career Roadmap"
+      "skill": "Skill Assessment", "skill_desc": "Diagnose and analyze your current skill set", "skill_input": "Enter your skills", "skill_output": "Skill Analysis",
+      "interview": "Interview Prep", "interview_desc": "Create tailored interview strategies", "interview_input": "Enter interview info", "interview_output": "Interview Strategy",
+      "plan": "Career Plan", "plan_desc": "Build a career roadmap toward your goals", "plan_input": "Enter career info", "plan_output": "Career Roadmap"
     },
     "learn": {
-      "explain": "Easy Explanation", "explain_input": "Enter topic to learn", "explain_output": "Explanation",
-      "quiz": "Quiz Generator", "quiz_input": "Enter study scope", "quiz_output": "Quiz Questions",
-      "roadmap": "Learning Roadmap", "roadmap_input": "Enter learning goal", "roadmap_output": "Study Plan"
+      "explain": "Easy Explanation", "explain_desc": "Break down complex concepts into simple terms", "explain_input": "Enter topic to learn", "explain_output": "Explanation",
+      "quiz": "Quiz Generator", "quiz_desc": "Auto-generate quizzes from study material", "quiz_input": "Enter study scope", "quiz_output": "Quiz Questions",
+      "roadmap": "Learning Roadmap", "roadmap_desc": "Create a step-by-step study plan for your goals", "roadmap_input": "Enter learning goal", "roadmap_output": "Study Plan"
     },
     "wedding": {
-      "plan": "Wedding Planner", "plan_input": "Enter wedding preferences", "plan_output": "Wedding Plan",
-      "speech": "Speech Writer", "speech_input": "Enter speech details", "speech_output": "Speech Draft",
-      "budget": "Budget Manager", "budget_input": "Enter budget info", "budget_output": "Budget Allocation"
+      "plan": "Wedding Planner", "plan_desc": "Create a wedding plan tailored to your preferences", "plan_input": "Enter wedding preferences", "plan_output": "Wedding Plan",
+      "speech": "Speech Writer", "speech_desc": "Draft speeches for any wedding occasion", "speech_input": "Enter speech details", "speech_output": "Speech Draft",
+      "budget": "Budget Manager", "budget_desc": "Optimize your wedding budget allocation", "budget_input": "Enter budget info", "budget_output": "Budget Allocation"
     },
     "moving": {
-      "checklist": "Moving Checklist", "checklist_input": "Enter moving details", "checklist_output": "To-Do List",
-      "cost": "Cost Estimate", "cost_input": "Enter moving info", "cost_output": "Cost Breakdown",
-      "layout": "Layout Planner", "layout_input": "Upload room photo", "layout_output": "Layout Plan"
+      "checklist": "Moving Checklist", "checklist_desc": "Create a complete moving to-do list", "checklist_input": "Enter moving details", "checklist_output": "To-Do List",
+      "cost": "Cost Estimate", "cost_desc": "Estimate your total moving costs", "cost_input": "Enter moving info", "cost_output": "Cost Breakdown",
+      "layout": "Layout Planner", "layout_desc": "Get furniture layout ideas from room photos", "layout_input": "Upload room photo", "layout_output": "Layout Plan"
     },
     "kid": {
-      "story": "Story Generator", "story_input": "Enter story preferences", "story_output": "Original Story",
-      "quiz": "Learning Quiz", "quiz_input": "Enter study scope", "quiz_output": "Quiz Questions",
-      "craft": "Craft Ideas", "craft_input": "Enter materials info", "craft_output": "Craft Plan"
+      "story": "Story Generator", "story_desc": "Create original stories for your child", "story_input": "Enter story preferences", "story_output": "Original Story",
+      "quiz": "Learning Quiz", "quiz_desc": "Create fun age-appropriate learning quizzes", "quiz_input": "Enter study scope", "quiz_output": "Quiz Questions",
+      "craft": "Craft Ideas", "craft_desc": "Get craft ideas from available materials", "craft_input": "Enter materials info", "craft_output": "Craft Plan"
     },
     "senior": {
-      "exercise": "Senior Exercise", "exercise_input": "Enter fitness level", "exercise_output": "Exercise Menu",
-      "digital": "Digital Guide", "digital_input": "Describe tech question", "digital_output": "Step-by-Step Guide",
-      "memory": "Memory Album", "memory_input": "Upload old photo", "memory_output": "Memory Story"
+      "exercise": "Senior Exercise", "exercise_desc": "Get safe exercise routines for your fitness level", "exercise_input": "Enter fitness level", "exercise_output": "Exercise Menu",
+      "digital": "Digital Guide", "digital_desc": "Get easy step-by-step guides for tech questions", "digital_input": "Describe tech question", "digital_output": "Step-by-Step Guide",
+      "memory": "Memory Album", "memory_desc": "Turn old photos into written memory stories", "memory_input": "Upload old photo", "memory_output": "Memory Story"
     },
     "date": {
-      "plan": "Date Planner", "plan_input": "Enter date preferences", "plan_output": "Date Plan",
-      "gift": "Gift Finder", "gift_input": "Enter partner info", "gift_output": "Gift Ideas",
-      "message": "Message Writer", "message_input": "Enter message context", "message_output": "Message Draft"
+      "plan": "Date Planner", "plan_desc": "Plan the perfect date for your preferences", "plan_input": "Enter date preferences", "plan_output": "Date Plan",
+      "gift": "Gift Finder", "gift_desc": "Find gifts that match your partner's interests", "gift_input": "Enter partner info", "gift_output": "Gift Ideas",
+      "message": "Message Writer", "message_desc": "Draft heartfelt messages for any occasion", "message_input": "Enter message context", "message_output": "Message Draft"
     },
     "car": {
-      "diagnose": "Car Diagnosis", "diagnose_input": "Describe car issue", "diagnose_output": "Diagnosis Results",
-      "cost": "Cost Calculator", "cost_input": "Enter vehicle info", "cost_output": "Annual Costs",
-      "compare": "Car Comparison", "compare_input": "Enter candidate cars", "compare_output": "Comparison Analysis"
+      "diagnose": "Car Diagnosis", "diagnose_desc": "Analyze possible causes from car symptoms", "diagnose_input": "Describe car issue", "diagnose_output": "Diagnosis Results",
+      "cost": "Cost Calculator", "cost_desc": "Calculate annual car ownership costs", "cost_input": "Enter vehicle info", "cost_output": "Annual Costs",
+      "compare": "Car Comparison", "compare_desc": "Compare specs and prices of candidate cars", "compare_input": "Enter candidate cars", "compare_output": "Comparison Analysis"
     },
     "time": {
-      "schedule": "Schedule Optimizer", "schedule_input": "Enter your tasks", "schedule_output": "Optimal Schedule",
-      "morning": "Morning Routine", "morning_input": "Enter morning availability", "morning_output": "Morning Plan",
-      "habit": "Habit Tracker", "habit_input": "Enter habit goals", "habit_output": "Habit Plan"
+      "schedule": "Schedule Optimizer", "schedule_desc": "Organize tasks into an optimal schedule", "schedule_input": "Enter your tasks", "schedule_output": "Optimal Schedule",
+      "morning": "Morning Routine", "morning_desc": "Create a productive morning routine", "morning_input": "Enter morning availability", "morning_output": "Morning Plan",
+      "habit": "Habit Tracker", "habit_desc": "Build a plan to stick to new habits", "habit_input": "Enter habit goals", "habit_output": "Habit Plan"
     },
     "eco": {
-      "footprint": "Carbon Footprint", "footprint_input": "Enter lifestyle info", "footprint_output": "CO2 Report",
-      "swap": "Eco Alternatives", "swap_input": "Upload product photo", "swap_output": "Alternative Suggestions",
-      "save": "Energy Saving", "save_input": "Enter energy usage info", "save_output": "Saving Tips"
+      "footprint": "Carbon Footprint", "footprint_desc": "Estimate your CO2 emissions from lifestyle", "footprint_input": "Enter lifestyle info", "footprint_output": "CO2 Report",
+      "swap": "Eco Alternatives", "swap_desc": "Find eco-friendly alternatives for everyday items", "swap_input": "Upload product photo", "swap_output": "Alternative Suggestions",
+      "save": "Energy Saving", "save_desc": "Get tips to reduce your energy consumption", "save_input": "Enter energy usage info", "save_output": "Saving Tips"
     },
     "marketing": {
-      "copy": "Copywriting", "copy_input": "Enter product info", "copy_output": "Copy Ideas",
-      "seo": "SEO Strategy", "seo_input": "Enter keywords", "seo_output": "SEO Plan",
-      "ad": "Ad Planner", "ad_input": "Enter ad info", "ad_output": "Ad Strategy"
+      "copy": "Copywriting", "copy_desc": "Create compelling copy that highlights your product", "copy_input": "Enter product info", "copy_output": "Copy Ideas",
+      "seo": "SEO Strategy", "seo_desc": "Build an SEO strategy from target keywords", "seo_input": "Enter keywords", "seo_output": "SEO Plan",
+      "ad": "Ad Planner", "ad_desc": "Create targeted advertising strategies", "ad_input": "Enter ad info", "ad_output": "Ad Strategy"
     },
     "garden": {
-      "identify": "Plant Identifier", "identify_input": "Upload plant photo", "identify_output": "Identification Results",
-      "calendar": "Growing Calendar", "calendar_input": "Enter growing conditions", "calendar_output": "Growing Schedule",
-      "trouble": "Plant Doctor", "trouble_input": "Upload problem photo", "trouble_output": "Solution"
+      "identify": "Plant Identifier", "identify_desc": "Identify plant species and traits from photos", "identify_input": "Upload plant photo", "identify_output": "Identification Results",
+      "calendar": "Growing Calendar", "calendar_desc": "Get a seasonal growing schedule for your area", "calendar_input": "Enter growing conditions", "calendar_output": "Growing Schedule",
+      "trouble": "Plant Doctor", "trouble_desc": "Diagnose plant problems and get solutions", "trouble_input": "Upload problem photo", "trouble_output": "Solution"
     },
     "biz": {
-      "swot": "SWOT Analysis", "swot_input": "Enter business info", "swot_output": "Analysis Report",
-      "pitch": "Business Plan", "pitch_input": "Enter project overview", "pitch_output": "Business Plan",
-      "email": "Business Email", "email_input": "Enter email key points", "email_output": "Email Draft"
+      "swot": "SWOT Analysis", "swot_desc": "Analyze strengths, weaknesses, opportunities, threats", "swot_input": "Enter business info", "swot_output": "Analysis Report",
+      "pitch": "Business Plan", "pitch_desc": "Create a business plan from your project overview", "pitch_input": "Enter project overview", "pitch_output": "Business Plan",
+      "email": "Business Email", "email_desc": "Draft professional business emails", "email_input": "Enter email key points", "email_output": "Email Draft"
     },
     "lang": {
-      "conv": "Conversation Practice", "conv_input": "Start a conversation", "conv_output": "Conversation Feedback",
-      "vocab": "Vocabulary Builder", "vocab_input": "Enter study preferences", "vocab_output": "Word List",
-      "trans": "Translate + Explain", "trans_input": "Enter text to translate", "trans_output": "Translation Results"
+      "conv": "Conversation Practice", "conv_desc": "Practice conversations with AI in any language", "conv_input": "Start a conversation", "conv_output": "Conversation Feedback",
+      "vocab": "Vocabulary Builder", "vocab_desc": "Auto-generate vocabulary lists for your level", "vocab_input": "Enter study preferences", "vocab_output": "Word List",
+      "trans": "Translate + Explain", "trans_desc": "Translate with nuance and grammar explanations", "trans_input": "Enter text to translate", "trans_output": "Translation Results"
     },
     "archive": {
-      "closet": "Closet Organizer", "closet_input": "Upload closet photo", "closet_output": "Organization Plan",
-      "desk": "Desk Organizer", "desk_input": "Upload desk photo", "desk_output": "Improvement Plan",
-      "digital": "Phone Cleanup", "digital_input": "Enter phone status", "digital_output": "Digital Cleanup Plan"
+      "closet": "Closet Organizer", "closet_desc": "Get an organization plan from closet photos", "closet_input": "Upload closet photo", "closet_output": "Organization Plan",
+      "desk": "Desk Organizer", "desk_desc": "Improve your workspace from desk photos", "desk_input": "Upload desk photo", "desk_output": "Improvement Plan",
+      "digital": "Phone Cleanup", "digital_desc": "Get a plan to declutter your phone", "digital_input": "Enter phone status", "digital_output": "Digital Cleanup Plan"
     },
     "event": {
-      "plan": "Event Planner", "plan_input": "Enter event details", "plan_output": "Event Plan",
-      "invite": "Invitation Writer", "invite_input": "Enter event info", "invite_output": "Invitation Text",
-      "gift": "Gift Finder", "gift_input": "Enter recipient info", "gift_output": "Gift Ideas"
+      "plan": "Event Planner", "plan_desc": "Plan events with schedules and logistics", "plan_input": "Enter event details", "plan_output": "Event Plan",
+      "invite": "Invitation Writer", "invite_desc": "Create invitation text for your event", "invite_input": "Enter event info", "invite_output": "Invitation Text",
+      "gift": "Gift Finder", "gift_desc": "Find gifts that match the recipient's interests", "gift_input": "Enter recipient info", "gift_output": "Gift Ideas"
     },
     "access": {
-      "web": "Web Accessibility Audit", "web_input": "Enter website URL", "web_output": "Accessibility Report",
-      "doc": "Plain Language Converter", "doc_input": "Enter text to simplify", "doc_output": "Simplified Version",
-      "sign": "Signage Designer", "sign_input": "Enter signage info", "sign_output": "Sign Design"
+      "web": "Web Accessibility Audit", "web_desc": "Audit your website's accessibility compliance", "web_input": "Enter website URL", "web_output": "Accessibility Report",
+      "doc": "Plain Language Converter", "doc_desc": "Simplify complex text into plain language", "doc_input": "Enter text to simplify", "doc_output": "Simplified Version",
+      "sign": "Signage Designer", "sign_desc": "Design clear and accessible signage", "sign_input": "Enter signage info", "sign_output": "Sign Design"
     },
     "news": {
-      "summary": "News Summary", "summary_input": "Paste news URL or text", "summary_output": "Summary",
-      "brief": "Morning Briefing", "brief_input": "Select areas of interest", "brief_output": "Today's Briefing",
-      "fact": "Fact Check", "fact_input": "Enter claim to verify", "fact_output": "Fact Check Results"
+      "summary": "News Summary", "summary_desc": "Get concise summaries of news articles", "summary_input": "Paste news URL or text", "summary_output": "Summary",
+      "brief": "Morning Briefing", "brief_desc": "Get a daily briefing on your areas of interest", "brief_input": "Select areas of interest", "brief_output": "Today's Briefing",
+      "fact": "Fact Check", "fact_desc": "Verify claims with multi-angle fact checking", "fact_input": "Enter claim to verify", "fact_output": "Fact Check Results"
     }
   }
 }

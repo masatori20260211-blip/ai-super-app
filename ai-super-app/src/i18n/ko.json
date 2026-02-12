@@ -19,7 +19,8 @@
     "dailyLimitReached": "오늘의 무료 사용 횟수를 모두 사용했습니다",
     "upgrade": "프리미엄으로 업그레이드",
     "freeRemaining": "오늘 {{count}}회 남음",
-    "premium": "프리미엄"
+    "premium": "프리미엄",
+    "imageGen": "AI 이미지 생성"
   },
   "categories": {
     "life": { "name": "라이프" },
@@ -71,6 +72,9 @@
     "archive": { "name": "정리AI", "tagline": "AI로 정리정돈을 효율적으로" },
     "event": { "name": "EventAI", "tagline": "AI로 이벤트 기획을 완벽하게" },
     "access": { "name": "배리어프리AI", "tagline": "AI로 접근성을 향상" },
-    "news": { "name": "NewsAI", "tagline": "AI로 뉴스를 효율적으로 캐치" }
+    "news": { "name": "NewsAI", "tagline": "AI로 뉴스를 효율적으로 캐치" },
+    "time": { "name": "시간관리AI", "tagline": "AI로 시간 활용을 최적화" },
+    "career": { "name": "CareerAI", "tagline": "AI로 커리어를 전면 서포트" },
+    "marketing": { "name": "MarketingAI", "tagline": "AI로 마케팅을 가속화" }
   }
 }

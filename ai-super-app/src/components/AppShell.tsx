@@ -32,6 +32,7 @@ export default function AppShell() {
   const [error, setError] = useState<string | null>(null);
   const [remaining, setRemaining] = useState(2);
   const [historyList, setHistoryList] = useState<HistoryEntry[]>([]);
+  const [showInfo, setShowInfo] = useState(false);
 
   useEffect(() => {
     setDict(getDict(locale));
@@ -92,6 +93,7 @@ export default function AppShell() {
     setResults([]);
     setHtmlPreview(null);
     setError(null);
+    setShowInfo(false);
   }
 
   async function processAI() {
@@ -457,9 +459,33 @@ export default function AppShell() {
       {/* Tool Content */}
       <div className="flex-1 px-4 py-6 pb-24" id="input-area">
         <div className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-          <h3 className="font-semibold text-gray-800 mb-4 text-sm">
-            {tt(tool.inputLabelKey)}
-          </h3>
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-semibold text-gray-800 text-sm">
+              {tt(tool.inputLabelKey)}
+            </h3>
+            <button
+              onClick={() => setShowInfo(!showInfo)}
+              className={`w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center transition-colors ${
+                showInfo
+                  ? "bg-gray-800 text-white"
+                  : "bg-gray-200 text-gray-500 hover:bg-gray-300"
+              }`}
+            >
+              ?
+            </button>
+          </div>
+          {showInfo && (
+            <div className="mb-4 p-3 bg-gray-50 rounded-xl border border-gray-100 fadein">
+              <p className="text-xs text-gray-600 leading-relaxed">
+                {tt(tool.nameKey.replace(/\.[^.]+$/, `.${tool.id}_desc`))}
+              </p>
+              {tool.hasImage && (
+                <span className="inline-block mt-2 px-2 py-0.5 text-[10px] font-bold bg-purple-100 text-purple-700 rounded-full">
+                  AI {tt("nav.imageGen") || "Image Generation"}
+                </span>
+              )}
+            </div>
+          )}
           <div className="space-y-3">
             {(tool.type === "image-upload" || tool.type === "file-upload") && (
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-gray-400 transition-colors">

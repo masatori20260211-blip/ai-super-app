@@ -20,7 +20,8 @@
     "upgrade": "プレミアムにアップグレード",
     "freeRemaining": "残り{{count}}回(今日)",
     "premium": "プレミアム",
-    "history": "履歴"
+    "history": "履歴",
+    "imageGen": "AI画像生成"
   },
   "categories": {
     "life": { "name": "暮らし" },
@@ -72,6 +73,9 @@
     "archive": { "name": "整理AI", "tagline": "片付け・整理をAIで効率化" },
     "event": { "name": "EventAI", "tagline": "イベント企画をAIで完璧に" },
     "access": { "name": "バリアフリーAI", "tagline": "アクセシビリティをAIで向上" },
-    "news": { "name": "NewsAI", "tagline": "ニュースをAIで効率的にキャッチ" }
+    "news": { "name": "NewsAI", "tagline": "ニュースをAIで効率的にキャッチ" },
+    "time": { "name": "時間管理AI", "tagline": "時間の使い方をAIで最適化" },
+    "career": { "name": "CareerAI", "tagline": "キャリアの全てをAIでサポート" },
+    "marketing": { "name": "MarketingAI", "tagline": "マーケティングをAIで加速" }
   }
 }

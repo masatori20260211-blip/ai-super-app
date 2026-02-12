@@ -18,7 +18,7 @@ export const bundles: Bundle[] = [
   {
     id:"creator",emoji:"🎬",gradient:"from-purple-500 to-indigo-600",bgLight:"bg-purple-50",
     tools:[
-      {id:"thumbnail",nameKey:"tools.creator.thumbnail",emoji:"🖼️",type:"text-input",
+      {id:"thumbnail",nameKey:"tools.creator.thumbnail",emoji:"🖼️",type:"text-input",hasImage:true,
         inputLabelKey:"tools.creator.thumbnail_input",outputLabelKey:"tools.creator.thumbnail_output",
         placeholder:"例: 【衝撃】プログラマーが1ヶ月で月収100万円達成した方法",
         aiPrompt:"あなたはYouTubeサムネイルデザイナーです。動画タイトルから、クリック率の高いサムネイルの構図・色使い・テキスト配置を提案してください。"},
@@ -80,14 +80,14 @@ export const bundles: Bundle[] = [
   {
     id:"design",emoji:"🎯",gradient:"from-violet-500 to-purple-600",bgLight:"bg-violet-50",
     tools:[
-      {id:"logo",nameKey:"tools.design.logo",emoji:"🎨",type:"form-input",
+      {id:"logo",nameKey:"tools.design.logo",emoji:"🎨",type:"form-input",hasImage:true,
         inputLabelKey:"tools.design.logo_input",outputLabelKey:"tools.design.logo_output",
         fields:[{name:"ブランド名",placeholder:"例: TechFlow"},{name:"業種",placeholder:"例: ITスタートアップ"},{name:"イメージ",placeholder:"例: モダン、信頼感"}],
         aiPrompt:"あなたはロゴデザイナーです。ブランド情報からロゴのコンセプト、形状、配色、フォントの提案をしてください。3パターン提案してください。"},
       {id:"color",nameKey:"tools.design.color",emoji:"🌈",type:"image-upload",
         inputLabelKey:"tools.design.color_input",outputLabelKey:"tools.design.color_output",
         aiPrompt:"あなたはカラーコンサルタントです。画像から色を抽出し、調和のとれたカラーパレットを提案してください。HEXコードも記載してください。"},
-      {id:"mockup",nameKey:"tools.design.mockup",emoji:"📱",type:"form-input",
+      {id:"mockup",nameKey:"tools.design.mockup",emoji:"📱",type:"form-input",hasImage:true,
         inputLabelKey:"tools.design.mockup_input",outputLabelKey:"tools.design.mockup_output",
         fields:[{name:"プロダクト",placeholder:"例: モバイルアプリ"},{name:"画面",placeholder:"例: ログイン画面"},{name:"スタイル",placeholder:"例: ミニマル"}],
         aiPrompt:"あなたはUIデザイナーです。プロダクト情報からUI/UXのモックアップ構成を提案してください。レイアウト、要素配置、インタラクションを記載してください。"}

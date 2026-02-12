@@ -15,6 +15,7 @@ export interface Tool {
   fields?: FormField[];
   outputLabelKey: string;
   aiPrompt: string;  // prompt template for Claude API
+  hasImage?: boolean; // true if this tool generates AI images
 }
 
 export interface Bundle {

@@ -19,7 +19,8 @@
     "dailyLimitReached": "今日免费次数已用完",
     "upgrade": "升级到高级版",
     "freeRemaining": "今日剩余{{count}}次",
-    "premium": "高级版"
+    "premium": "高级版",
+    "imageGen": "AI图像生成"
   },
   "categories": {
     "life": { "name": "生活" },
@@ -71,6 +72,9 @@
     "archive": { "name": "整理AI", "tagline": "用AI高效收纳整理" },
     "event": { "name": "EventAI", "tagline": "用AI完美策划活动" },
     "access": { "name": "无障碍AI", "tagline": "用AI提升无障碍体验" },
-    "news": { "name": "NewsAI", "tagline": "用AI高效获取新闻资讯" }
+    "news": { "name": "NewsAI", "tagline": "用AI高效获取新闻资讯" },
+    "time": { "name": "时间管理AI", "tagline": "用AI优化时间管理" },
+    "career": { "name": "CareerAI", "tagline": "用AI全方位助力职业发展" },
+    "marketing": { "name": "MarketingAI", "tagline": "用AI加速营销工作" }
   }
 }

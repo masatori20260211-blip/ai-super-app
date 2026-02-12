@@ -32,7 +32,7 @@
     },
     "realestate": {
       "floor": "3D Interior", "floor_input": "Upload room photo", "floor_output": "Interior Plan",
-      "value": "Property Valuation", "value_input": "Enter property info", "value_output": "Valuation Results",
+      "compare": "Property Comparison", "compare_input": "Enter candidate properties", "compare_output": "Comparison Report",
       "checklist": "Viewing Checklist", "checklist_input": "Enter viewing criteria", "checklist_output": "Checklist"
     },
     "sns": {
@@ -42,13 +42,13 @@
     },
     "money": {
       "budget": "Budget Planner", "budget_input": "Enter financial info", "budget_output": "Budget Plan",
-      "tax": "Tax Helper", "tax_input": "Enter income info", "tax_output": "Tax Advice",
+      "deal": "Money Saver", "deal_input": "Enter spending info", "deal_output": "Savings Plan",
       "saving": "Savings Plan", "saving_input": "Enter savings goal", "saving_output": "Savings Strategy"
     },
     "pet": {
       "petphoto": "Pet Photos", "petphoto_input": "Upload pet photo", "petphoto_output": "Photo Tips",
       "petfood": "Pet Diet", "petfood_input": "Enter pet info", "petfood_output": "Diet Advice",
-      "petsymptom": "Pet Health", "petsymptom_input": "Describe symptoms", "petsymptom_output": "Health Advice"
+      "training": "Pet Training", "training_input": "Describe behavior issue", "training_output": "Training Tips"
     },
     "travel": {
       "plan": "Trip Planner", "plan_input": "Enter travel preferences", "plan_output": "Travel Plan",
@@ -85,10 +85,10 @@
       "comp": "Composition Advice", "comp_input": "Upload photo", "comp_output": "Composition Analysis",
       "edit": "Edit Guide", "edit_input": "Upload photo", "edit_output": "Editing Steps"
     },
-    "legal": {
-      "check": "Contract Review", "check_input": "Upload contract file", "check_output": "Review Results",
-      "consult": "Legal Q&A", "consult_input": "Describe legal question", "consult_output": "Legal Info",
-      "letter": "Letter Drafting", "letter_input": "Enter letter key points", "letter_output": "Letter Draft"
+    "career": {
+      "skill": "Skill Assessment", "skill_input": "Enter your skills", "skill_output": "Skill Analysis",
+      "interview": "Interview Prep", "interview_input": "Enter interview info", "interview_output": "Interview Strategy",
+      "plan": "Career Plan", "plan_input": "Enter career info", "plan_output": "Career Roadmap"
     },
     "learn": {
       "explain": "Easy Explanation", "explain_input": "Enter topic to learn", "explain_output": "Explanation",
@@ -111,7 +111,7 @@
       "craft": "Craft Ideas", "craft_input": "Enter materials info", "craft_output": "Craft Plan"
     },
     "senior": {
-      "health": "Health Manager", "health_input": "Enter health info", "health_output": "Health Advice",
+      "exercise": "Senior Exercise", "exercise_input": "Enter fitness level", "exercise_output": "Exercise Menu",
       "digital": "Digital Guide", "digital_input": "Describe tech question", "digital_output": "Step-by-Step Guide",
       "memory": "Memory Album", "memory_input": "Upload old photo", "memory_output": "Memory Story"
     },
@@ -125,20 +125,20 @@
       "cost": "Cost Calculator", "cost_input": "Enter vehicle info", "cost_output": "Annual Costs",
       "compare": "Car Comparison", "compare_input": "Enter candidate cars", "compare_output": "Comparison Analysis"
     },
-    "sleep": {
-      "analyze": "Sleep Analysis", "analyze_input": "Enter sleep info", "analyze_output": "Analysis Report",
-      "routine": "Night Routine", "routine_input": "Enter lifestyle info", "routine_output": "Improvement Plan",
-      "sound": "Sleep Sounds", "sound_input": "Enter preferences", "sound_output": "Sound Recommendations"
+    "time": {
+      "schedule": "Schedule Optimizer", "schedule_input": "Enter your tasks", "schedule_output": "Optimal Schedule",
+      "morning": "Morning Routine", "morning_input": "Enter morning availability", "morning_output": "Morning Plan",
+      "habit": "Habit Tracker", "habit_input": "Enter habit goals", "habit_output": "Habit Plan"
     },
     "eco": {
       "footprint": "Carbon Footprint", "footprint_input": "Enter lifestyle info", "footprint_output": "CO2 Report",
       "swap": "Eco Alternatives", "swap_input": "Upload product photo", "swap_output": "Alternative Suggestions",
       "save": "Energy Saving", "save_input": "Enter energy usage info", "save_output": "Saving Tips"
     },
-    "invest": {
-      "analysis": "Investment Analysis", "analysis_input": "Enter investment info", "analysis_output": "Analysis Report",
-      "portfolio": "Asset Allocation", "portfolio_input": "Enter asset info", "portfolio_output": "Allocation Suggestions",
-      "news": "Market Insight", "news_input": "Enter topic of interest", "news_output": "Market Analysis"
+    "marketing": {
+      "copy": "Copywriting", "copy_input": "Enter product info", "copy_output": "Copy Ideas",
+      "seo": "SEO Strategy", "seo_input": "Enter keywords", "seo_output": "SEO Plan",
+      "ad": "Ad Planner", "ad_input": "Enter ad info", "ad_output": "Ad Strategy"
     },
     "garden": {
       "identify": "Plant Identifier", "identify_input": "Upload plant photo", "identify_output": "Identification Results",

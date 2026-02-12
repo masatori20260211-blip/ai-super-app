@@ -32,7 +32,7 @@
     },
     "realestate": {
       "floor": "3D 인테리어", "floor_input": "방 사진 업로드", "floor_output": "디자인 안",
-      "value": "부동산 시세", "value_input": "부동산 정보 입력", "value_output": "시세 결과",
+      "compare": "매물 비교", "compare_input": "후보 매물 입력", "compare_output": "비교 리포트",
       "checklist": "방문 체크리스트", "checklist_input": "방문 조건 입력", "checklist_output": "체크리스트"
     },
     "sns": {
@@ -42,13 +42,13 @@
     },
     "money": {
       "budget": "예산 계획", "budget_input": "재무 정보 입력", "budget_output": "예산 계획",
-      "tax": "세금 도우미", "tax_input": "수입 정보 입력", "tax_output": "세금 조언",
+      "deal": "절약 팁", "deal_input": "지출 정보 입력", "deal_output": "절약 계획",
       "saving": "저축 계획", "saving_input": "저축 목표 입력", "saving_output": "저축 플랜"
     },
     "pet": {
       "petphoto": "반려동물 사진", "petphoto_input": "반려동물 사진 업로드", "petphoto_output": "편집된 사진",
       "petfood": "반려동물 식단", "petfood_input": "반려동물 정보 입력", "petfood_output": "식단 조언",
-      "petsymptom": "반려동물 건강", "petsymptom_input": "증상 설명", "petsymptom_output": "건강 조언"
+      "training": "훈련 상담", "training_input": "행동 문제 설명", "training_output": "훈련 방법"
     },
     "travel": {
       "plan": "여행 계획", "plan_input": "여행 조건 입력", "plan_output": "여행 플랜",
@@ -85,10 +85,10 @@
       "comp": "구도 조언", "comp_input": "사진 업로드", "comp_output": "구도 분석",
       "edit": "편집 가이드", "edit_input": "사진 업로드", "edit_output": "편집 순서"
     },
-    "legal": {
-      "check": "계약서 검토", "check_input": "계약서 파일 업로드", "check_output": "검토 결과",
-      "consult": "법률 상담", "consult_input": "법률 문제 설명", "consult_output": "법률 조언",
-      "letter": "서한 작성", "letter_input": "서한 요점 입력", "letter_output": "서한 초안"
+    "career": {
+      "skill": "스킬 진단", "skill_input": "스킬 정보 입력", "skill_output": "스킬 분석",
+      "interview": "면접 대비", "interview_input": "면접 정보 입력", "interview_output": "면접 전략",
+      "plan": "커리어 플랜", "plan_input": "커리어 정보 입력", "plan_output": "커리어 로드맵"
     },
     "learn": {
       "explain": "개념 설명", "explain_input": "배우고 싶은 내용 입력", "explain_output": "설명",
@@ -111,7 +111,7 @@
       "craft": "만들기 아이디어", "craft_input": "재료 정보 입력", "craft_output": "만들기 안"
     },
     "senior": {
-      "health": "건강 관리", "health_input": "건강 정보 입력", "health_output": "건강 조언",
+      "exercise": "시니어 체조", "exercise_input": "체력 정보 입력", "exercise_output": "운동 메뉴",
       "digital": "디지털 가이드", "digital_input": "조작 문제 설명", "digital_output": "조작 가이드",
       "memory": "추억 정리", "memory_input": "옛 사진 업로드", "memory_output": "추억 이야기"
     },
@@ -125,20 +125,20 @@
       "cost": "비용 견적", "cost_input": "차량 정보 입력", "cost_output": "연간 비용",
       "compare": "차종 비교", "compare_input": "후보 차종 입력", "compare_output": "비교 분석"
     },
-    "sleep": {
-      "analyze": "수면 분석", "analyze_input": "수면 정보 입력", "analyze_output": "분석 리포트",
-      "routine": "생활 리듬", "routine_input": "생활 습관 입력", "routine_output": "개선 안",
-      "sound": "수면 사운드", "sound_input": "취향 입력", "sound_output": "추천 안"
+    "time": {
+      "schedule": "스케줄 최적화", "schedule_input": "할 일 입력", "schedule_output": "최적 스케줄",
+      "morning": "아침 루틴", "morning_input": "아침 시간 입력", "morning_output": "모닝 루틴",
+      "habit": "습관 트래커", "habit_input": "습관 정보 입력", "habit_output": "습관 계획"
     },
     "eco": {
       "footprint": "탄소 발자국", "footprint_input": "생활 정보 입력", "footprint_output": "탄소 발자국 리포트",
       "swap": "친환경 대안", "swap_input": "일용품 사진 업로드", "swap_output": "대안 제안",
       "save": "에너지 절약", "save_input": "에너지 사용 정보 입력", "save_output": "절약 안"
     },
-    "invest": {
-      "analysis": "투자 분석", "analysis_input": "투자 정보 입력", "analysis_output": "분석 리포트",
-      "portfolio": "자산 배분", "portfolio_input": "자산 정보 입력", "portfolio_output": "배분 제안",
-      "news": "시장 동향", "news_input": "관심 분야 입력", "news_output": "시장 분석"
+    "marketing": {
+      "copy": "카피라이팅", "copy_input": "상품 정보 입력", "copy_output": "카피 안",
+      "seo": "SEO 전략", "seo_input": "키워드 입력", "seo_output": "SEO 계획",
+      "ad": "광고 기획", "ad_input": "광고 정보 입력", "ad_output": "광고 전략"
     },
     "garden": {
       "identify": "식물 식별", "identify_input": "식물 사진 업로드", "identify_output": "식별 결과",

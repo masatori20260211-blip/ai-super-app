@@ -195,7 +195,10 @@ export async function POST(req: NextRequest) {
         replicateDebug = `exception:${e instanceof Error ? e.message : String(e)}`;
       }
     } else if (toolId === "thumbnail") {
-      replicateDebug = "no_REPLICATE_API_TOKEN";
+      const hasKey = "REPLICATE_API_TOKEN" in process.env;
+      const keyLen = (process.env.REPLICATE_API_TOKEN || "").length;
+      const envKeys = Object.keys(process.env).filter(k => k.includes("REPLICATE")).join(",");
+      replicateDebug = `no_token:exists=${hasKey}:len=${keyLen}:matches=${envKeys || "none"}`;
     }
 
     // Try template-based rendering first, fallback to text-to-HTML

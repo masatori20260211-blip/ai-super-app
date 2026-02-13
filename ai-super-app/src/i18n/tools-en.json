@@ -174,6 +174,203 @@
       "summary": "News Summary", "summary_desc": "Get concise summaries of news articles", "summary_input": "Paste news URL or text", "summary_output": "Summary",
       "brief": "Morning Briefing", "brief_desc": "Get a daily briefing on your areas of interest", "brief_input": "Select areas of interest", "brief_output": "Today's Briefing",
       "fact": "Fact Check", "fact_desc": "Verify claims with multi-angle fact checking", "fact_input": "Enter claim to verify", "fact_output": "Fact Check Results"
+    },
+    "fitness": {
+      "workout": "Workout Plan", "workout_desc": "Create a workout menu tailored to your goals", "workout_input": "Enter workout conditions", "workout_output": "Workout Menu",
+      "stretch": "Stretching Guide", "stretch_desc": "Get a stretching routine for your needs", "stretch_input": "Enter stretching conditions", "stretch_output": "Stretch Menu"
+    },
+    "sleep": {
+      "improve": "Sleep Improvement", "improve_desc": "Get advice to improve your sleep quality", "improve_input": "Describe sleep concerns", "improve_output": "Improvement Advice",
+      "routine": "Bedtime Routine", "routine_desc": "Create a relaxing bedtime routine", "routine_input": "Enter current sleep habits", "routine_output": "Routine Suggestion",
+      "bedroom": "Bedroom Optimization", "bedroom_desc": "Optimize your bedroom for better sleep", "bedroom_input": "Enter bedroom details", "bedroom_output": "Optimization Plan"
+    },
+    "beauty": {
+      "skincare": "Skincare Routine", "skincare_desc": "Get a skincare routine for your skin type", "skincare_input": "Enter skin condition", "skincare_output": "Skincare Plan",
+      "makeup": "Makeup Advisor", "makeup_desc": "Get makeup tips for any occasion", "makeup_input": "Enter makeup preferences", "makeup_output": "Makeup Advice",
+      "hair": "Hairstyle Suggestion", "hair_desc": "Find hairstyles that suit your face shape", "hair_input": "Enter hairstyle preferences", "hair_output": "Hairstyle Ideas"
+    },
+    "reading": {
+      "recommend": "Book Recommendation", "recommend_desc": "Get personalized book recommendations", "recommend_input": "Enter reading preferences", "recommend_output": "Recommended Books",
+      "summary": "Book Summary", "summary_desc": "Get clear summaries of key book points", "summary_input": "Enter book details", "summary_output": "Summary Notes",
+      "note": "Reading Notes", "note_desc": "Organize your thoughts into reading notes", "note_input": "Enter your impressions", "note_output": "Reading Notes"
+    },
+    "movie": {
+      "recommend": "Movie Recommendation", "recommend_desc": "Get personalized movie recommendations", "recommend_input": "Enter movie preferences", "recommend_output": "Recommended Movies",
+      "review": "Movie Review", "review_desc": "Create a structured movie review", "review_input": "Enter your thoughts on the movie", "review_output": "Review Draft"
+    },
+    "camping": {
+      "gear": "Gear Selector", "gear_desc": "Find the right camping gear for your trip", "gear_input": "Enter camping conditions", "gear_output": "Recommended Gear",
+      "meal": "Camp Cooking", "meal_desc": "Get easy recipes for outdoor cooking", "meal_input": "Enter ingredients and conditions", "meal_output": "Camp Recipes",
+      "spot": "Campsite Finder", "spot_desc": "Find campsites that match your needs", "spot_input": "Enter camping preferences", "spot_output": "Recommended Campsites"
+    },
+    "handmade": {
+      "pattern": "Pattern Maker", "pattern_desc": "Generate patterns for your craft project", "pattern_input": "Enter project details", "pattern_output": "Pattern Design",
+      "material": "Material List", "material_desc": "Create a materials list for your project", "material_input": "Enter project details", "material_output": "Material List",
+      "pricing": "Pricing Guide", "pricing_desc": "Calculate fair pricing for handmade items", "pricing_input": "Enter product and cost info", "pricing_output": "Price Suggestion"
+    },
+    "presentation": {
+      "design": "Slide Designer", "design_desc": "Get design ideas for your presentation", "design_input": "Enter presentation content", "design_output": "Design Suggestions",
+      "speaking": "Speaking Coach", "speaking_desc": "Improve your presentation delivery", "speaking_input": "Enter presentation details", "speaking_output": "Speaking Tips",
+      "qa": "Q&A Preparation", "qa_desc": "Prepare for audience questions in advance", "qa_input": "Enter presentation content", "qa_output": "Expected Q&A List"
+    },
+    "mental": {
+      "meditate": "Meditation Guide", "meditate_desc": "Get a meditation plan for your goals", "meditate_input": "Enter meditation purpose", "meditate_output": "Meditation Guide",
+      "stress": "Stress Relief", "stress_desc": "Identify stressors and get coping strategies", "stress_input": "Describe your stress situation", "stress_output": "Stress Relief Plan",
+      "journal": "Journaling Prompt", "journal_desc": "Get journaling templates to clear your mind", "journal_input": "Enter how you're feeling", "journal_output": "Journal Template"
+    },
+    "cleaning": {
+      "plan": "Cleaning Schedule", "plan_desc": "Create an efficient cleaning schedule", "plan_input": "Enter areas to clean", "plan_output": "Cleaning Schedule",
+      "stain": "Stain Remover Guide", "stain_desc": "Get the right method to remove any stain", "stain_input": "Describe the stain", "stain_output": "Removal Steps",
+      "storage": "Storage Advisor", "storage_desc": "Maximize your space with smart storage tips", "storage_input": "Describe storage challenge", "storage_output": "Storage Plan"
+    },
+    "baby": {
+      "food": "Baby Food Guide", "food_desc": "Get age-appropriate baby food recipes", "food_input": "Enter baby's age in months", "food_output": "Baby Food Recipes",
+      "growth": "Growth Tracker", "growth_desc": "Track and analyze your baby's growth", "growth_input": "Enter growth data", "growth_output": "Growth Report",
+      "cry": "Cry Decoder", "cry_desc": "Get tips for soothing your crying baby", "cry_input": "Describe the crying pattern", "cry_output": "Soothing Advice"
+    },
+    "tax": {
+      "filing": "Tax Filing Helper", "filing_desc": "Get step-by-step tax filing guidance", "filing_input": "Enter filing details", "filing_output": "Filing Guide",
+      "expense": "Expense Tracker", "expense_desc": "Categorize and track business expenses", "expense_input": "Enter expense details", "expense_output": "Expense Report",
+      "deduction": "Deduction Finder", "deduction_desc": "Find all applicable tax deductions", "deduction_input": "Enter income and expenses", "deduction_output": "Deduction List"
+    },
+    "freelance": {
+      "portfolio": "Portfolio Builder", "portfolio_desc": "Create a compelling portfolio structure", "portfolio_input": "Enter your work history", "portfolio_output": "Portfolio Plan",
+      "rate": "Rate Calculator", "rate_desc": "Set competitive rates for your skills", "rate_input": "Enter skills and experience", "rate_output": "Rate Suggestion",
+      "client": "Client Communication", "client_desc": "Draft professional client messages", "client_input": "Enter communication details", "client_output": "Message Draft"
+    },
+    "meeting": {
+      "minutes": "Meeting Minutes", "minutes_desc": "Auto-generate minutes from meeting notes", "minutes_input": "Enter meeting notes", "minutes_output": "Meeting Minutes",
+      "agenda": "Agenda Creator", "agenda_desc": "Create effective meeting agendas", "agenda_input": "Enter meeting objectives", "agenda_output": "Agenda",
+      "facilitate": "Facilitation Guide", "facilitate_desc": "Get a script to run meetings smoothly", "facilitate_input": "Enter meeting details", "facilitate_output": "Facilitation Script"
+    },
+    "datavis": {
+      "chart": "Chart Advisor", "chart_desc": "Find the best chart type for your data", "chart_input": "Enter data details", "chart_output": "Chart Suggestion",
+      "dashboard": "Dashboard Designer", "dashboard_desc": "Design dashboards around your KPIs", "dashboard_input": "Enter KPI details", "dashboard_output": "Dashboard Design",
+      "report": "Report Generator", "report_desc": "Create clear reports from your data", "report_input": "Enter data details", "report_output": "Analysis Report"
+    },
+    "startup": {
+      "mvp": "MVP Designer", "mvp_desc": "Design a minimum viable product", "mvp_input": "Enter product details", "mvp_output": "MVP Design Plan",
+      "pitch": "Pitch Deck Creator", "pitch_desc": "Create investor-ready pitch materials", "pitch_input": "Enter business details", "pitch_output": "Pitch Deck Draft",
+      "growth": "Growth Strategy", "growth_desc": "Build a strategy to scale your business", "growth_input": "Enter business details", "growth_output": "Growth Strategy"
+    },
+    "podcast": {
+      "plan": "Show Planner", "plan_desc": "Plan your podcast format and structure", "plan_input": "Enter show theme", "plan_output": "Show Plan",
+      "script": "Script Writer", "script_desc": "Auto-generate episode scripts", "script_input": "Enter episode details", "script_output": "Episode Script",
+      "edit": "Editing Guide", "edit_desc": "Get audio editing tips and guidance", "edit_input": "Enter audio details", "edit_output": "Editing Advice"
+    },
+    "sports": {
+      "training": "Training Menu", "training_desc": "Create a training plan for your goals", "training_input": "Enter training conditions", "training_output": "Training Menu",
+      "tactics": "Tactics Planner", "tactics_desc": "Build game tactics and strategies", "tactics_input": "Enter team details", "tactics_output": "Tactics Plan",
+      "analysis": "Performance Analysis", "analysis_desc": "Analyze performance from sports data", "analysis_input": "Enter performance data", "analysis_output": "Analysis Report"
+    },
+    "abroad": {
+      "prepare": "Study Abroad Prep", "prepare_desc": "Get a checklist for studying abroad", "prepare_input": "Enter study abroad plans", "prepare_output": "Preparation Checklist",
+      "essay": "Essay Review", "essay_desc": "Review and improve application essays", "essay_input": "Enter your essay draft", "essay_output": "Review Results",
+      "culture": "Culture Guide", "culture_desc": "Learn about local culture and customs", "culture_input": "Enter destination country", "culture_output": "Culture Guide"
+    },
+    "interior": {
+      "makeover": "Room Makeover", "makeover_desc": "Get ideas to transform your room's look", "makeover_input": "Enter room details", "makeover_output": "Makeover Plan",
+      "lighting": "Lighting Planner", "lighting_desc": "Design the perfect lighting for your space", "lighting_input": "Enter room details", "lighting_output": "Lighting Plan",
+      "curtain": "Curtain Selector", "curtain_desc": "Find the right curtains for your room", "curtain_input": "Enter room details", "curtain_output": "Curtain Suggestions"
+    },
+    "party": {
+      "plan": "Party Planner", "plan_desc": "Plan a party around your chosen theme", "plan_input": "Enter party details", "plan_output": "Party Plan",
+      "games": "Game Suggestions", "games_desc": "Get fun game ideas for your group", "games_input": "Enter guest details", "games_output": "Recommended Games",
+      "deco": "Decoration Ideas", "deco_desc": "Get themed decoration ideas for your party", "deco_input": "Enter party details", "deco_output": "Decoration Plan"
+    },
+    "ceremony": {
+      "manner": "Etiquette Guide", "manner_desc": "Learn proper etiquette for formal events", "manner_input": "Enter the occasion", "manner_output": "Etiquette Guide",
+      "envelope": "Gift Money Guide", "envelope_desc": "Get guidance on monetary gift amounts", "envelope_input": "Enter occasion details", "envelope_output": "Gift Money Guide",
+      "return": "Return Gift Selector", "return_desc": "Find the right thank-you gifts to give", "return_input": "Enter gift received details", "return_output": "Return Gift Ideas"
+    },
+    "recycle": {
+      "remake": "Upcycle Ideas", "remake_desc": "Turn old items into something new and stylish", "remake_input": "Enter item details", "remake_output": "Upcycle Ideas",
+      "reuse": "Reuse Guide", "reuse_desc": "Find creative ways to reuse everyday items", "reuse_input": "Enter item to reuse", "reuse_output": "Reuse Ideas",
+      "appraise": "Resale Estimator", "appraise_desc": "Estimate resale value of your items", "appraise_input": "Enter item details", "appraise_output": "Appraisal Results"
+    },
+    "nail": {
+      "design": "Nail Design", "design_desc": "Get nail design ideas for your style", "design_input": "Enter design preferences", "design_output": "Design Ideas",
+      "selfnail": "DIY Nail Guide", "selfnail_desc": "Get step-by-step at-home nail tutorials", "selfnail_input": "Enter nail conditions", "selfnail_output": "DIY Nail Steps",
+      "care": "Nail Care", "care_desc": "Get tips to keep your nails healthy", "care_input": "Enter nail condition", "care_output": "Care Advice"
+    },
+    "yoga": {
+      "pose": "Pose Guide", "pose_desc": "Learn yoga poses for your goals", "pose_input": "Enter yoga purpose", "pose_output": "Pose Guide",
+      "sequence": "Sequence Builder", "sequence_desc": "Build a yoga flow for your level", "sequence_input": "Enter yoga preferences", "sequence_output": "Yoga Sequence",
+      "breathe": "Breathing Guide", "breathe_desc": "Learn breathing techniques for your needs", "breathe_input": "Enter breathing purpose", "breathe_output": "Breathing Guide"
+    },
+    "bicycle": {
+      "maintain": "Bike Maintenance", "maintain_desc": "Get step-by-step bike maintenance guides", "maintain_input": "Enter bike condition", "maintain_output": "Maintenance Steps",
+      "route": "Route Planner", "route_desc": "Find cycling routes for your preferences", "route_input": "Enter route preferences", "route_output": "Recommended Routes",
+      "choose": "Bike Selector", "choose_desc": "Find the right bike for your needs", "choose_input": "Enter usage conditions", "choose_output": "Recommended Bikes"
+    },
+    "running": {
+      "plan": "Running Plan", "plan_desc": "Create a running plan for your goals", "plan_input": "Enter running goals", "plan_output": "Running Plan",
+      "form": "Form Improvement", "form_desc": "Improve your running form and efficiency", "form_input": "Describe your current form", "form_output": "Form Advice",
+      "shoes": "Shoe Finder", "shoes_desc": "Find the right running shoes for you", "shoes_input": "Enter running conditions", "shoes_output": "Recommended Shoes"
+    },
+    "manga": {
+      "story": "Story Structure", "story_desc": "Build a compelling manga storyline", "story_input": "Enter story setting", "story_output": "Story Outline",
+      "character": "Character Designer", "character_desc": "Design memorable manga characters", "character_input": "Enter character details", "character_output": "Character Profile",
+      "panel": "Panel Layout", "panel_desc": "Get panel layout ideas for your scenes", "panel_input": "Enter scene content", "panel_output": "Panel Layout Ideas"
+    },
+    "video": {
+      "edit": "Video Edit Guide", "edit_desc": "Get step-by-step video editing tips", "edit_input": "Enter video details", "edit_output": "Editing Steps",
+      "effect": "Effect Suggestions", "effect_desc": "Find the right effects for your video", "effect_input": "Enter video content", "effect_output": "Effect Suggestions",
+      "storyboard": "Storyboard Creator", "storyboard_desc": "Create storyboards from your video concept", "storyboard_input": "Enter video concept", "storyboard_output": "Storyboard"
+    },
+    "speech": {
+      "draft": "Speech Writer", "draft_desc": "Draft a speech for any occasion", "draft_input": "Enter speech requirements", "draft_output": "Speech Draft",
+      "practice": "Practice Coach", "practice_desc": "Get tips to improve your delivery", "practice_input": "Enter presentation content", "practice_output": "Practice Tips",
+      "anxiety": "Stage Fright Help", "anxiety_desc": "Overcome nervousness with proven tips", "anxiety_input": "Describe the speaking situation", "anxiety_output": "Anxiety Relief Plan"
+    },
+    "nutrition": {
+      "mealplan": "Meal Planner", "mealplan_desc": "Create a meal plan for your goals", "mealplan_input": "Enter dietary goals", "mealplan_output": "Meal Plan",
+      "supplement": "Supplement Advisor", "supplement_desc": "Get supplement recommendations for your needs", "supplement_input": "Enter dietary info", "supplement_output": "Supplement Suggestions",
+      "ingredient": "Ingredient Guide", "ingredient_desc": "Learn nutrition facts and best uses", "ingredient_input": "Enter ingredient name", "ingredient_output": "Ingredient Guide"
+    },
+    "giftwrap": {
+      "wrap": "Gift Wrapping", "wrap_desc": "Get stylish gift wrapping techniques", "wrap_input": "Enter gift details", "wrap_output": "Wrapping Instructions",
+      "card": "Message Card", "card_desc": "Create the perfect message card", "card_input": "Enter message occasion", "card_output": "Card Design Ideas"
+    },
+    "aquarium": {
+      "setup": "Tank Setup Guide", "setup_desc": "Get a beginner-friendly aquarium setup guide", "setup_input": "Enter tank conditions", "setup_output": "Setup Instructions",
+      "water": "Water Quality Manager", "water_desc": "Get advice on aquarium water management", "water_input": "Enter water parameters", "water_output": "Water Care Guide",
+      "fish": "Fish Selector", "fish_desc": "Find fish species that suit your tank", "fish_input": "Enter tank conditions", "fish_output": "Recommended Fish"
+    },
+    "debug": {
+      "error": "Error Analyzer", "error_desc": "Diagnose errors and get fix suggestions", "error_input": "Enter error message", "error_output": "Error Analysis",
+      "review": "Code Reviewer", "review_desc": "Get code review feedback and improvements", "review_input": "Enter code to review", "review_output": "Review Results",
+      "perf": "Performance Optimizer", "perf_desc": "Find performance bottlenecks in your code", "perf_input": "Enter code to analyze", "perf_output": "Optimization Tips"
+    },
+    "exam": {
+      "strategy": "Exam Strategy", "strategy_desc": "Build a study strategy for your exam", "strategy_input": "Enter exam details", "strategy_output": "Study Strategy",
+      "memorize": "Memory Helper", "memorize_desc": "Get effective memorization techniques", "memorize_input": "Enter material to memorize", "memorize_output": "Memory Plan",
+      "timetable": "Study Timetable", "timetable_desc": "Create a countdown study schedule", "timetable_input": "Enter exam date and scope", "timetable_output": "Study Timetable"
+    },
+    "email_pro": {
+      "template": "Email Template", "template_desc": "Generate email templates for any situation", "template_input": "Enter email scenario", "template_output": "Email Template",
+      "followup": "Follow-Up Drafter", "followup_desc": "Draft effective follow-up emails", "followup_input": "Enter previous exchange", "followup_output": "Follow-Up Draft",
+      "apology": "Apology Email", "apology_desc": "Write sincere and professional apologies", "apology_input": "Describe the situation", "apology_output": "Apology Draft"
+    },
+    "mindmap": {
+      "organize": "Thought Organizer", "organize_desc": "Organize ideas into a mind map format", "organize_input": "Enter information to organize", "organize_output": "Mind Map",
+      "brainstorm": "Brainstorm Map", "brainstorm_desc": "Generate ideas from a central theme", "brainstorm_input": "Enter brainstorm topic", "brainstorm_output": "Idea Map",
+      "project": "Project Mapper", "project_desc": "Visualize your project's big picture", "project_input": "Enter project details", "project_output": "Project Map"
+    },
+    "boardgame": {
+      "rules": "Rules Explainer", "rules_desc": "Get easy-to-understand rule explanations", "rules_input": "Enter game name", "rules_output": "Rules Explanation",
+      "strategy": "Strategy Guide", "strategy_desc": "Learn winning tips and strategies", "strategy_input": "Enter game details", "strategy_output": "Strategy Guide",
+      "recommend": "Game Recommendation", "recommend_desc": "Find games for your group and taste", "recommend_input": "Enter play conditions", "recommend_output": "Recommended Games"
+    },
+    "tea": {
+      "brew": "Brewing Guide", "brew_desc": "Learn the best way to brew your tea", "brew_input": "Enter tea type", "brew_output": "Brewing Guide",
+      "leaf": "Tea Leaf Selector", "leaf_desc": "Find tea leaves that match your taste", "leaf_input": "Enter taste preferences", "leaf_output": "Recommended Teas",
+      "pairing": "Tea Pairing", "pairing_desc": "Find snacks and foods that pair with tea", "pairing_input": "Enter tea type", "pairing_output": "Pairing Suggestions"
+    },
+    "astro": {
+      "observe": "Stargazing Guide", "observe_desc": "See what's visible tonight and how to find it", "observe_input": "Enter observation conditions", "observe_output": "Observation Guide",
+      "event": "Astronomy Events", "event_desc": "Get a calendar of upcoming sky events", "event_input": "Enter your location", "event_output": "Event Calendar",
+      "photograph": "Astrophotography Guide", "photograph_desc": "Learn techniques for stunning sky photos", "photograph_input": "Enter camera equipment", "photograph_output": "Photography Guide"
     }
   }
 }

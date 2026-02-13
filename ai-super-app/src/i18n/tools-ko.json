@@ -174,6 +174,203 @@
       "summary": "뉴스 요약", "summary_desc": "뉴스 기사를 간결하게 요약", "summary_input": "뉴스 URL 또는 본문 붙여넣기", "summary_output": "요약 결과",
       "brief": "아침 브리핑", "brief_desc": "관심 분야의 최신 뉴스 브리핑", "brief_input": "관심 분야 선택", "brief_output": "오늘의 브리핑",
       "fact": "팩트체크", "fact_desc": "정보의 정확성을 다각도로 체크", "fact_input": "확인할 정보 입력", "fact_output": "팩트체크 결과"
+    },
+    "fitness": {
+      "workout": "운동 플랜", "workout_desc": "목적에 맞는 운동 메뉴를 작성", "workout_input": "운동 조건 입력", "workout_output": "운동 메뉴",
+      "stretch": "스트레칭 가이드", "stretch_desc": "목적에 맞는 스트레칭 메뉴를 제안", "stretch_input": "스트레칭 조건 입력", "stretch_output": "스트레칭 메뉴"
+    },
+    "sleep": {
+      "improve": "수면 개선", "improve_desc": "수면 습관 분석으로 개선 방법 제안", "improve_input": "수면 정보 입력", "improve_output": "개선 제안",
+      "routine": "취침 루틴", "routine_desc": "숙면을 위한 취침 루틴 작성", "routine_input": "생활 패턴 입력", "routine_output": "취침 루틴",
+      "bedroom": "침실 환경", "bedroom_desc": "숙면을 위한 침실 환경 개선 제안", "bedroom_input": "침실 정보 입력", "bedroom_output": "환경 개선 안"
+    },
+    "beauty": {
+      "skincare": "스킨케어 루틴", "skincare_desc": "피부 타입에 맞는 스킨케어 루틴 제안", "skincare_input": "피부 정보 입력", "skincare_output": "스킨케어 루틴",
+      "makeup": "메이크업 가이드", "makeup_desc": "상황에 맞는 메이크업 방법 제안", "makeup_input": "메이크업 조건 입력", "makeup_output": "메이크업 안",
+      "hair": "헤어스타일 추천", "hair_desc": "얼굴형에 맞는 헤어스타일 추천", "hair_input": "얼굴형 정보 입력", "hair_output": "추천 헤어스타일"
+    },
+    "reading": {
+      "recommend": "도서 추천", "recommend_desc": "취향에 맞는 책을 추천", "recommend_input": "독서 취향 입력", "recommend_output": "추천 도서",
+      "summary": "독서 요약", "summary_desc": "책 내용을 핵심 위주로 요약", "summary_input": "도서 정보 입력", "summary_output": "요약 결과",
+      "note": "독서 노트", "note_desc": "독서 메모를 체계적으로 정리", "note_input": "독서 메모 입력", "note_output": "독서 노트"
+    },
+    "movie": {
+      "recommend": "영화 추천", "recommend_desc": "취향에 맞는 영화를 추천", "recommend_input": "영화 취향 입력", "recommend_output": "추천 영화",
+      "review": "영화 리뷰", "review_desc": "영화 감상문 작성을 도와주는 가이드", "review_input": "영화 감상 입력", "review_output": "리뷰 초안"
+    },
+    "camping": {
+      "gear": "캠핑 장비 추천", "gear_desc": "캠핑 스타일에 맞는 장비 추천", "gear_input": "캠핑 조건 입력", "gear_output": "추천 장비",
+      "meal": "캠핑 요리", "meal_desc": "캠핑에서 만들 수 있는 요리 제안", "meal_input": "캠핑 식재료 입력", "meal_output": "캠핑 레시피",
+      "spot": "캠핑장 추천", "spot_desc": "조건에 맞는 캠핑장 추천", "spot_input": "캠핑 조건 입력", "spot_output": "추천 캠핑장"
+    },
+    "handmade": {
+      "pattern": "도안 생성", "pattern_desc": "핸드메이드 도안을 자동 생성", "pattern_input": "작품 조건 입력", "pattern_output": "도안",
+      "material": "재료 가이드", "material_desc": "작품에 필요한 재료 목록과 추천", "material_input": "작품 정보 입력", "material_output": "재료 목록",
+      "pricing": "가격 책정", "pricing_desc": "핸드메이드 작품의 적정 가격 산출", "pricing_input": "제작 비용 입력", "pricing_output": "가격 제안"
+    },
+    "presentation": {
+      "design": "프레젠테이션 디자인", "design_desc": "발표 자료의 디자인 구성 제안", "design_input": "발표 내용 입력", "design_output": "디자인 안",
+      "speaking": "발표 연습", "speaking_desc": "발표 스크립트와 화법 코칭", "speaking_input": "발표 원고 입력", "speaking_output": "발표 코칭",
+      "qa": "질의응답 대비", "qa_desc": "예상 질문과 모범 답변 준비", "qa_input": "발표 주제 입력", "qa_output": "Q&A 준비"
+    },
+    "mental": {
+      "meditate": "명상 가이드", "meditate_desc": "목적에 맞는 명상 프로그램 제안", "meditate_input": "명상 목적 입력", "meditate_output": "명상 프로그램",
+      "stress": "스트레스 관리", "stress_desc": "스트레스 원인 분석과 해소법 제안", "stress_input": "스트레스 상황 입력", "stress_output": "관리 방법",
+      "journal": "감정 일기", "journal_desc": "감정 정리를 위한 저널링 가이드", "journal_input": "오늘의 감정 입력", "journal_output": "저널 가이드"
+    },
+    "cleaning": {
+      "plan": "청소 계획", "plan_desc": "공간별 체계적인 청소 계획 작성", "plan_input": "청소 조건 입력", "plan_output": "청소 계획",
+      "stain": "얼룩 제거", "stain_desc": "얼룩 종류에 맞는 제거 방법 안내", "stain_input": "얼룩 정보 입력", "stain_output": "제거 방법",
+      "storage": "수납 정리", "storage_desc": "공간에 맞는 수납 방법 제안", "storage_input": "공간 정보 입력", "storage_output": "수납 안"
+    },
+    "baby": {
+      "food": "이유식 가이드", "food_desc": "월령에 맞는 이유식 레시피 제안", "food_input": "아기 월령 입력", "food_output": "이유식 레시피",
+      "growth": "성장 기록", "growth_desc": "아기 성장 발달 상태 체크", "growth_input": "성장 정보 입력", "growth_output": "발달 분석",
+      "cry": "울음 분석", "cry_desc": "아기 울음 원인 분석과 대처법 제안", "cry_input": "울음 상황 입력", "cry_output": "대처 방법"
+    },
+    "tax": {
+      "filing": "세금 신고", "filing_desc": "세금 신고 절차를 단계별 안내", "filing_input": "신고 정보 입력", "filing_output": "신고 가이드",
+      "expense": "경비 처리", "expense_desc": "경비 항목의 세무 처리 방법 안내", "expense_input": "경비 정보 입력", "expense_output": "처리 방법",
+      "deduction": "공제 최적화", "deduction_desc": "적용 가능한 세액 공제 항목 분석", "deduction_input": "소득 정보 입력", "deduction_output": "공제 안"
+    },
+    "freelance": {
+      "portfolio": "포트폴리오 작성", "portfolio_desc": "매력적인 포트폴리오 구성 제안", "portfolio_input": "작업 이력 입력", "portfolio_output": "포트폴리오 안",
+      "rate": "단가 산정", "rate_desc": "프리랜서 적정 단가 산출", "rate_input": "업무 정보 입력", "rate_output": "단가 제안",
+      "client": "클라이언트 관리", "client_desc": "클라이언트 커뮤니케이션 전략 제안", "client_input": "클라이언트 상황 입력", "client_output": "관리 전략"
+    },
+    "meeting": {
+      "minutes": "회의록 작성", "minutes_desc": "회의 내용을 체계적으로 정리", "minutes_input": "회의 내용 입력", "minutes_output": "회의록",
+      "agenda": "안건 작성", "agenda_desc": "효과적인 회의 안건 구성", "agenda_input": "회의 목적 입력", "agenda_output": "안건 목록",
+      "facilitate": "퍼실리테이션", "facilitate_desc": "회의 진행을 위한 진행 가이드 작성", "facilitate_input": "회의 정보 입력", "facilitate_output": "진행 가이드"
+    },
+    "datavis": {
+      "chart": "차트 생성", "chart_desc": "데이터에 맞는 최적 차트 유형 제안", "chart_input": "데이터 입력", "chart_output": "차트 안",
+      "dashboard": "대시보드 설계", "dashboard_desc": "KPI에 맞는 대시보드 구성 제안", "dashboard_input": "KPI 정보 입력", "dashboard_output": "대시보드 안",
+      "report": "데이터 리포트", "report_desc": "데이터 분석 결과를 리포트로 정리", "report_input": "분석 데이터 입력", "report_output": "분석 리포트"
+    },
+    "startup": {
+      "mvp": "MVP 설계", "mvp_desc": "최소 기능 제품 설계와 검증 전략", "mvp_input": "아이디어 입력", "mvp_output": "MVP 설계서",
+      "pitch": "투자 피칭", "pitch_desc": "투자자를 위한 피칭 자료 작성", "pitch_input": "사업 정보 입력", "pitch_output": "피칭 자료",
+      "growth": "성장 전략", "growth_desc": "스타트업 성장 전략 수립", "growth_input": "사업 현황 입력", "growth_output": "성장 전략"
+    },
+    "podcast": {
+      "plan": "팟캐스트 기획", "plan_desc": "팟캐스트 컨셉과 에피소드 기획", "plan_input": "팟캐스트 주제 입력", "plan_output": "기획안",
+      "script": "대본 작성", "script_desc": "에피소드 대본과 진행 구성 작성", "script_input": "에피소드 주제 입력", "script_output": "대본 초안",
+      "edit": "편집 가이드", "edit_desc": "팟캐스트 오디오 편집 순서 안내", "edit_input": "녹음 정보 입력", "edit_output": "편집 가이드"
+    },
+    "sports": {
+      "training": "훈련 계획", "training_desc": "목표에 맞는 훈련 프로그램 작성", "training_input": "훈련 조건 입력", "training_output": "훈련 프로그램",
+      "tactics": "전술 분석", "tactics_desc": "경기 상황에 맞는 전술 제안", "tactics_input": "경기 정보 입력", "tactics_output": "전술 안",
+      "analysis": "경기 분석", "analysis_desc": "경기 데이터 분석과 피드백 제공", "analysis_input": "경기 데이터 입력", "analysis_output": "분석 결과"
+    },
+    "abroad": {
+      "prepare": "유학 준비", "prepare_desc": "유학 준비 절차를 단계별 안내", "prepare_input": "유학 조건 입력", "prepare_output": "준비 가이드",
+      "essay": "에세이 작성", "essay_desc": "입학 에세이 구성과 첨삭 지도", "essay_input": "에세이 주제 입력", "essay_output": "에세이 첨삭",
+      "culture": "문화 가이드", "culture_desc": "현지 문화와 생활 정보 안내", "culture_input": "유학 지역 입력", "culture_output": "문화 가이드"
+    },
+    "interior": {
+      "makeover": "인테리어 변신", "makeover_desc": "공간 사진으로 인테리어 변신 제안", "makeover_input": "공간 사진 업로드", "makeover_output": "인테리어 안",
+      "lighting": "조명 계획", "lighting_desc": "공간에 맞는 조명 배치 제안", "lighting_input": "공간 정보 입력", "lighting_output": "조명 안",
+      "curtain": "커튼 추천", "curtain_desc": "인테리어에 맞는 커튼·블라인드 추천", "curtain_input": "인테리어 정보 입력", "curtain_output": "추천 커튼"
+    },
+    "party": {
+      "plan": "파티 기획", "plan_desc": "테마에 맞는 파티 기획 작성", "plan_input": "파티 조건 입력", "plan_output": "기획안",
+      "games": "파티 게임", "games_desc": "인원과 상황에 맞는 파티 게임 추천", "games_input": "파티 정보 입력", "games_output": "추천 게임",
+      "deco": "파티 데코", "deco_desc": "테마에 맞는 파티 장식 아이디어 제안", "deco_input": "파티 테마 입력", "deco_output": "장식 아이디어"
+    },
+    "ceremony": {
+      "manner": "예절 가이드", "manner_desc": "관혼상제 예절과 매너 안내", "manner_input": "행사 정보 입력", "manner_output": "예절 가이드",
+      "envelope": "축의금 가이드", "envelope_desc": "상황에 맞는 축의금·부의금 안내", "envelope_input": "행사 관계 입력", "envelope_output": "금액 안내",
+      "return": "답례품 추천", "return_desc": "예산에 맞는 답례품 추천", "return_input": "예산 정보 입력", "return_output": "추천 답례품"
+    },
+    "recycle": {
+      "remake": "리메이크 아이디어", "remake_desc": "불용품을 활용한 리메이크 아이디어 제안", "remake_input": "불용품 정보 입력", "remake_output": "리메이크 안",
+      "reuse": "재활용 가이드", "reuse_desc": "분리수거와 재활용 방법 안내", "reuse_input": "폐기물 정보 입력", "reuse_output": "재활용 방법",
+      "appraise": "중고 가치 평가", "appraise_desc": "중고품의 예상 시세 분석", "appraise_input": "물품 정보 입력", "appraise_output": "시세 분석"
+    },
+    "nail": {
+      "design": "네일 디자인", "design_desc": "트렌드에 맞는 네일 디자인 제안", "design_input": "스타일 조건 입력", "design_output": "디자인 안",
+      "selfnail": "셀프 네일 가이드", "selfnail_desc": "셀프 네일 시술 순서를 단계별 안내", "selfnail_input": "네일 디자인 입력", "selfnail_output": "시술 가이드",
+      "care": "네일 케어", "care_desc": "손톱 건강을 위한 관리법 제안", "care_input": "손톱 상태 입력", "care_output": "케어 방법"
+    },
+    "yoga": {
+      "pose": "요가 포즈", "pose_desc": "목적에 맞는 요가 포즈 안내", "pose_input": "요가 목적 입력", "pose_output": "포즈 가이드",
+      "sequence": "시퀀스 구성", "sequence_desc": "레벨에 맞는 요가 시퀀스 작성", "sequence_input": "요가 레벨 입력", "sequence_output": "요가 시퀀스",
+      "breathe": "호흡법", "breathe_desc": "목적에 맞는 호흡법 가이드", "breathe_input": "호흡 목적 입력", "breathe_output": "호흡법 안내"
+    },
+    "bicycle": {
+      "maintain": "자전거 정비", "maintain_desc": "자전거 점검·정비 방법 안내", "maintain_input": "자전거 상태 입력", "maintain_output": "정비 가이드",
+      "route": "라이딩 코스", "route_desc": "조건에 맞는 라이딩 코스 추천", "route_input": "라이딩 조건 입력", "route_output": "추천 코스",
+      "choose": "자전거 선택", "choose_desc": "용도에 맞는 자전거 추천", "choose_input": "용도 정보 입력", "choose_output": "추천 자전거"
+    },
+    "running": {
+      "plan": "러닝 플랜", "plan_desc": "목표에 맞는 러닝 훈련 계획 작성", "plan_input": "러닝 목표 입력", "plan_output": "훈련 계획",
+      "form": "자세 교정", "form_desc": "올바른 러닝 자세와 교정 포인트 안내", "form_input": "러닝 고민 입력", "form_output": "자세 가이드",
+      "shoes": "러닝화 추천", "shoes_desc": "러닝 스타일에 맞는 신발 추천", "shoes_input": "러닝 정보 입력", "shoes_output": "추천 러닝화"
+    },
+    "manga": {
+      "story": "스토리 구성", "story_desc": "만화 스토리 플롯과 구성 작성", "story_input": "스토리 설정 입력", "story_output": "스토리 구성",
+      "character": "캐릭터 설정", "character_desc": "매력적인 캐릭터 설정과 배경 작성", "character_input": "캐릭터 조건 입력", "character_output": "캐릭터 설정",
+      "panel": "컷 구성", "panel_desc": "페이지 컷 배분과 연출 제안", "panel_input": "장면 정보 입력", "panel_output": "컷 구성 안"
+    },
+    "video": {
+      "edit": "영상 편집", "edit_desc": "영상 편집 순서와 기법 안내", "edit_input": "영상 정보 입력", "edit_output": "편집 가이드",
+      "effect": "이펙트 가이드", "effect_desc": "장면에 맞는 효과와 전환 제안", "effect_input": "장면 정보 입력", "effect_output": "이펙트 안",
+      "storyboard": "스토리보드", "storyboard_desc": "영상 촬영을 위한 스토리보드 작성", "storyboard_input": "영상 기획 입력", "storyboard_output": "스토리보드"
+    },
+    "speech": {
+      "draft": "연설문 작성", "draft_desc": "상황에 맞는 연설문 초안 작성", "draft_input": "연설 정보 입력", "draft_output": "연설문 초안",
+      "practice": "발표 연습", "practice_desc": "발표 리허설과 피드백 가이드", "practice_input": "발표 원고 입력", "practice_output": "연습 가이드",
+      "anxiety": "발표 불안 극복", "anxiety_desc": "발표 불안 해소를 위한 전략 제안", "anxiety_input": "불안 상황 입력", "anxiety_output": "극복 전략"
+    },
+    "nutrition": {
+      "mealplan": "식단 관리", "mealplan_desc": "목표에 맞는 맞춤 식단 작성", "mealplan_input": "식단 조건 입력", "mealplan_output": "맞춤 식단",
+      "supplement": "영양제 추천", "supplement_desc": "건강 상태에 맞는 영양제 추천", "supplement_input": "건강 정보 입력", "supplement_output": "추천 영양제",
+      "ingredient": "식재료 분석", "ingredient_desc": "식재료의 영양 성분과 효능 분석", "ingredient_input": "식재료 입력", "ingredient_output": "영양 분석"
+    },
+    "giftwrap": {
+      "wrap": "선물 포장", "wrap_desc": "선물에 맞는 포장 방법 안내", "wrap_input": "선물 정보 입력", "wrap_output": "포장 가이드",
+      "card": "카드 메시지", "card_desc": "상황에 맞는 카드 메시지 작성", "card_input": "카드 상황 입력", "card_output": "메시지 초안"
+    },
+    "aquarium": {
+      "setup": "수조 세팅", "setup_desc": "수조 환경 설정과 레이아웃 제안", "setup_input": "수조 정보 입력", "setup_output": "세팅 가이드",
+      "water": "수질 관리", "water_desc": "수질 유지와 관리 방법 안내", "water_input": "수질 정보 입력", "water_output": "관리 방법",
+      "fish": "어종 추천", "fish_desc": "환경에 맞는 어종과 혼영 조합 추천", "fish_input": "수조 환경 입력", "fish_output": "추천 어종"
+    },
+    "debug": {
+      "error": "에러 분석", "error_desc": "에러 메시지 원인 분석과 해결책 제안", "error_input": "에러 정보 입력", "error_output": "해결 방법",
+      "review": "코드 리뷰", "review_desc": "코드의 문제점과 개선점 분석", "review_input": "코드 입력", "review_output": "리뷰 결과",
+      "perf": "성능 최적화", "perf_desc": "코드 성능 병목 분석과 개선 제안", "perf_input": "코드 정보 입력", "perf_output": "최적화 안"
+    },
+    "exam": {
+      "strategy": "시험 전략", "strategy_desc": "시험 유형에 맞는 공부 전략 수립", "strategy_input": "시험 정보 입력", "strategy_output": "학습 전략",
+      "memorize": "암기 도우미", "memorize_desc": "효율적인 암기 방법과 도구 제안", "memorize_input": "암기 내용 입력", "memorize_output": "암기 가이드",
+      "timetable": "시간표 작성", "timetable_desc": "시험까지의 학습 시간표 작성", "timetable_input": "시험 일정 입력", "timetable_output": "학습 시간표"
+    },
+    "email_pro": {
+      "template": "메일 템플릿", "template_desc": "상황별 비즈니스 메일 템플릿 제공", "template_input": "메일 상황 입력", "template_output": "메일 템플릿",
+      "followup": "후속 메일", "followup_desc": "적절한 후속 메일 작성 가이드", "followup_input": "이전 메일 입력", "followup_output": "후속 메일 안",
+      "apology": "사과 메일", "apology_desc": "진심 어린 사과 메일 작성", "apology_input": "사과 상황 입력", "apology_output": "사과 메일 초안"
+    },
+    "mindmap": {
+      "organize": "생각 정리", "organize_desc": "아이디어를 마인드맵으로 체계화", "organize_input": "아이디어 입력", "organize_output": "마인드맵",
+      "brainstorm": "브레인스토밍", "brainstorm_desc": "주제에서 아이디어를 확장·발산", "brainstorm_input": "브레인스토밍 주제 입력", "brainstorm_output": "아이디어 맵",
+      "project": "프로젝트 맵", "project_desc": "프로젝트 구조를 시각적으로 정리", "project_input": "프로젝트 정보 입력", "project_output": "프로젝트 맵"
+    },
+    "boardgame": {
+      "rules": "규칙 설명", "rules_desc": "보드게임 규칙을 알기 쉽게 설명", "rules_input": "게임 이름 입력", "rules_output": "규칙 가이드",
+      "strategy": "전략 가이드", "strategy_desc": "게임 승리를 위한 전략 제안", "strategy_input": "게임 상황 입력", "strategy_output": "전략 안",
+      "recommend": "보드게임 추천", "recommend_desc": "인원과 취향에 맞는 보드게임 추천", "recommend_input": "게임 조건 입력", "recommend_output": "추천 게임"
+    },
+    "tea": {
+      "brew": "차 우리기", "brew_desc": "차 종류에 맞는 최적의 우림 방법 안내", "brew_input": "차 종류 입력", "brew_output": "우림 가이드",
+      "leaf": "찻잎 가이드", "leaf_desc": "찻잎 종류와 특징 안내", "leaf_input": "취향 정보 입력", "leaf_output": "추천 찻잎",
+      "pairing": "티 페어링", "pairing_desc": "차에 맞는 다과와 음식 추천", "pairing_input": "차 정보 입력", "pairing_output": "페어링 안"
+    },
+    "astro": {
+      "observe": "천체 관측", "observe_desc": "관측 조건에 맞는 천체 관측 가이드", "observe_input": "관측 조건 입력", "observe_output": "관측 가이드",
+      "event": "천문 이벤트", "event_desc": "다가오는 천문 이벤트 정보 안내", "event_input": "관측 지역 입력", "event_output": "이벤트 정보",
+      "photograph": "천체 사진", "photograph_desc": "천체 사진 촬영 기법과 설정 안내", "photograph_input": "촬영 조건 입력", "photograph_output": "촬영 가이드"
     }
   }
 }

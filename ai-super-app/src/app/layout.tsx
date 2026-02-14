@@ -1,10 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
+import { InstallPrompt } from "@/components/InstallPrompt";
 
 export const metadata: Metadata = {
   title: "AI Super App",
-  description: "40 AI tools in one app — your daily AI companion",
+  description: "80 AI tools in one app — your daily AI companion",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body className="bg-gray-50 text-gray-900 min-h-screen">
         {children}
         <ServiceWorkerRegister />
+        <InstallPrompt />
       </body>
     </html>
   );

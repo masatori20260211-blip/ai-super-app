@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AI Super App</string>
+    <string name="title_activity_main">AI Super App</string>
+    <string name="package_name">app.aisuper.tools</string>
+    <string name="custom_url_scheme">app.aisuper.tools</string>
+</resources>

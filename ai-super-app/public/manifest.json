@@ -1,7 +1,7 @@
 {
   "name": "AI Super App",
   "short_name": "AI Super",
-  "description": "40 AI tools in one app — your daily AI companion",
+  "description": "80 AI tools in one app — your daily AI companion",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f8fafc",

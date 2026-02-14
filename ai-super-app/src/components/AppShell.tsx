@@ -5,6 +5,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { categories } from "@/data/categories";
 import { bundles } from "@/data/bundles";
 import { type Locale, LOCALES, getLocaleLabel, getDict, t } from "@/lib/i18n";
+import { isNativeApp } from "@/lib/platform";
 import type { Bundle, Tool } from "@/data/types";
 
 type View = "home" | "category" | "bundle" | "history";
@@ -211,6 +212,22 @@ export default function AppShell() {
   // ─── Upgrade ───
   async function handleUpgrade() {
     if (!session) { signIn(); return; }
+
+    // Native apps must use App Store / Google Play in-app purchase
+    if (isNativeApp()) {
+      // TODO: Implement Capacitor in-app purchase plugin
+      // For now, open the subscription management page
+      const upgradeUrl = "https://mt-2sby.vercel.app/?upgrade=1";
+      const w = window as unknown as Record<string, unknown>;
+      const cap = w.Capacitor as { Plugins?: { Browser?: { open(opts: { url: string }): void } } } | undefined;
+      if (cap?.Plugins?.Browser) {
+        cap.Plugins.Browser.open({ url: upgradeUrl });
+      } else {
+        window.open(upgradeUrl, "_blank");
+      }
+      return;
+    }
+
     try {
       const res = await fetch("/api/checkout", { method: "POST" });
       const data = await res.json();
@@ -365,6 +382,14 @@ export default function AppShell() {
         <p className="text-center text-[10px] text-gray-300 mt-16">
           {tt("app.footer")}
         </p>
+        <div className="flex justify-center gap-4 mt-3 mb-8">
+          <a href="/privacy" className="text-[10px] text-gray-400 hover:text-gray-600">
+            プライバシーポリシー
+          </a>
+          <a href="/terms" className="text-[10px] text-gray-400 hover:text-gray-600">
+            利用規約
+          </a>
+        </div>
       </main>
     );
   }

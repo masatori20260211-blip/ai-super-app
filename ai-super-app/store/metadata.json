@@ -1,0 +1,47 @@
+{
+  "appId": "app.aisuper.tools",
+  "appName": "AI Super App",
+  "defaultLocale": "ja",
+
+  "listings": {
+    "ja": {
+      "title": "AI Super App - 80種類のAIツール",
+      "shortDescription": "日常をAIで便利に。80種類のAIツールがこの1つのアプリに。",
+      "fullDescription": "AI Super Appは、日常生活・仕事・学習・趣味をAIでサポートする万能ツールアプリです。\n\n■ 80種類以上のAIツール\n料理レシピ提案、旅行プラン作成、ビジネスメール作成、語学学習、健康管理、クリエイティブ制作など、あらゆるシーンで活躍するAIツールを搭載。\n\n■ 8カテゴリで整理\n・生活 — 料理、掃除、インテリア、引越し\n・健康 — フィットネス、睡眠、ヨガ、栄養管理\n・仕事 — ビジネス、マーケティング、税金、会議\n・クリエイティブ — デザイン、音楽、動画、ポッドキャスト\n・学習 — 語学、読書、試験対策、プレゼン\n・家族 — 育児、ペット、ウェディング、シニア\n・趣味 — キャンプ、ゲーム、DIY、アクアリウム\n・おでかけ — 旅行、スポーツ、自転車、海外\n\n■ 無料で始められる\n毎日2回まで無料でAIツールをお試しいただけます。プレミアムプランで無制限にご利用可能。\n\n■ 4言語対応\n日本語・英語・韓国語・中国語に対応。",
+      "keywords": "AI,人工知能,ツール,便利,生活,仕事,レシピ,旅行,学習,翻訳,健康"
+    },
+    "en": {
+      "title": "AI Super App - 80 AI Tools",
+      "shortDescription": "Make life easier with AI. 80 AI tools in one app.",
+      "fullDescription": "AI Super App is a versatile tool app that supports your daily life, work, learning, and hobbies with AI.\n\n■ 80+ AI Tools\nFrom cooking recipes and travel planning to business emails, language learning, health management, and creative production — AI tools for every scenario.\n\n■ Organized in 8 Categories\n• Life — Cooking, Cleaning, Interior, Moving\n• Health — Fitness, Sleep, Yoga, Nutrition\n• Work — Business, Marketing, Tax, Meetings\n• Creative — Design, Music, Video, Podcast\n• Study — Languages, Reading, Exams, Presentations\n• Family — Childcare, Pets, Wedding, Senior Care\n• Hobby — Camping, Games, DIY, Aquarium\n• Outing — Travel, Sports, Cycling, Abroad\n\n■ Start for Free\nTry AI tools up to 2 times per day for free. Go premium for unlimited access.\n\n■ 4 Languages\nSupports Japanese, English, Korean, and Chinese.",
+      "keywords": "AI,artificial intelligence,tools,productivity,life,work,recipes,travel,learning,translation,health"
+    }
+  },
+
+  "pricing": {
+    "free": { "dailyLimit": 2 },
+    "premium": {
+      "monthlyPrice": "¥980",
+      "features": "unlimited"
+    }
+  },
+
+  "contentRating": "Everyone",
+  "category": "Productivity",
+  "privacyPolicyUrl": "https://mt-2sby.vercel.app/privacy",
+  "termsUrl": "https://mt-2sby.vercel.app/terms",
+
+  "buildInstructions": {
+    "android": {
+      "generateKeystore": "keytool -genkey -v -keystore release.keystore -alias ai-super-app -keyalg RSA -keysize 2048 -validity 10000",
+      "buildAAB": "cd android && ./gradlew bundleRelease",
+      "buildAPK": "cd android && ./gradlew assembleRelease",
+      "outputAAB": "android/app/build/outputs/bundle/release/app-release.aab",
+      "outputAPK": "android/app/build/outputs/apk/release/app-release.apk"
+    },
+    "ios": {
+      "openXcode": "npx cap open ios",
+      "notes": "Xcode > Product > Archive でApp Store Connectにアップロード"
+    }
+  }
+}
